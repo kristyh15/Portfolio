@@ -1,0 +1,188 @@
+
+/*
+	With this selector, we are specifying that all objects use
+	the border-box model (not the content-box model)
+*/
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*
+	Here we are using a 'fancy' css selector that is 
+	specifying if the class of an item starts with
+	'grid-col-', then we should apply the styling listed
+*/
+[class^='grid-col-'] {
+/*	float: left; */
+	padding: 0; 
+/*	text-align: center; /* center the content in this block by default */
+	width: 100%;  /* defining the default to be mobile first */
+}
+
+/*
+	Here we are clearing floated items to ensure that
+	our 'grid'  structure can have different rows
+*/
+.grid-row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+@media (min-width: 1079px) {
+  .grid-col-5of12 {
+  width: 100%;
+  }
+}
+
+@media (min-width: 1088px) {
+  p.project-description {
+  	max-width: 100%;
+  }
+}
+
+/*
+	Setting up break points for Mid Size (Tablet)
+*/
+
+@media (min-width: 40em) {
+
+/* Define columns */
+
+
+.grid-col-m-1of12 {
+	width: 8.333%;	
+}
+
+.grid-col-m-2of12 {
+	width: 16.667%;	
+}
+
+.grid-col-m-3of12 {
+	width: 25%;	
+}
+
+.grid-col-m-4of12 {
+	width: 33.333%;
+}
+
+.grid-col-m-5of12 {
+	width: 41.667%;	
+}
+
+.grid-col-m-6of12 {
+	width: 50%;
+}
+
+.grid-col-m-7of12 {
+	width: 58.333%;
+}
+
+.grid-col-m-8of12 {
+  width: 66.667%;
+}
+
+.grid-col-m-9of12 {
+	width: 75%;
+}
+
+.grid-col-m-10of12 {
+	width: 83.333%;
+}
+
+.grid-col-m-11of12 {
+	width: 91.667%;
+}
+
+.grid-col-m-12of12 {
+	width: 100%;
+}
+
+}
+
+
+/*
+	Setting up break points for WEB
+*/
+
+@media (min-width: 68em) {
+
+/* Define columns */
+.grid-col-1of12 {
+	width: 8.333%;	
+}
+
+.grid-col-2of12 {
+	width: 16.667%;	
+}
+
+.grid-col-3of12 {
+	width: 25%;	
+}
+
+.grid-col-4of12 {
+	width: 33.333%;
+}
+
+.grid-col-5of12 {
+	width: 41.667%;	
+}
+
+.grid-col-6of12 {
+	width: 50%;
+}
+
+.grid-col-7of12 {
+	width: 58.333%;
+}
+
+.grid-col-8of12 {
+  width: 66.667%;
+}
+
+.grid-col-9of12 {
+	width: 75%;
+}
+
+.grid-col-10of12 {
+	width: 83.333%;
+}
+
+.grid-col-11of12 {
+	width: 91.667%;
+}
+
+.grid-col-11-5of12 {
+	width: 95.8335%;
+}
+
+.grid-col-12of12 {
+	width: 100%;
+}
+
+}
+
+
+/*
+	Here we are clearing floated items to ensure that
+	our 'grid' structure can have different rows
+*/
+.grid-row:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+

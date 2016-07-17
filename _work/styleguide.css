@@ -1,0 +1,1209 @@
+@font-face {
+  font-family: 'NeutraText';  /* Sets a name for our font family */
+  font-weight: bold;  /* Sets the font-weight for this particular font */
+  font-style: bold;   /* Sets the font-style for this particular font */
+  src: url('fonts/NeutraText-Bold.eot'); /* Support for IE9 */
+  src: 
+    url('fonts/NeutraText-Bold.eot?#iefix') format('embedded-opentype'),   
+    url('fonts/NeutraText-Bold.woff2') format('woff2'),
+    url('fonts/NeutraText-Bold.woff') format('woff'),
+    url('fonts/NeutraText-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/NeutraText-Demi.eot');
+  src: 
+    url('fonts/NeutraText-Demi.eot?#iefix') format('embedded-opentype'),
+    url('fonts/NeutraText-Demi.woff') format('woff2'),
+    url('fonts/NeutraText-Demi.woff') format('woff'),
+    url('fonts/NeutraText-Demi.ttf') format('truetype');
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Calibre';
+  font-weight: bolder;
+  font-style: bolder;
+  src: url('fonts/Calibre-Semibold.eot');
+  src: 
+    url('fonts/Calibre-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Calibre-Semibold.woff') format('woff2'),
+    url('fonts/Calibre-Semibold.woff') format('woff'),
+    url('fonts/Calibre-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/Calibre-Regular.eot');
+  src: 
+    url('fonts/Calibre-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Calibre-Regular.woff') format('woff2'),
+    url('fonts/Calibre-Regular.woff') format('woff'),
+    url('fonts/Calibre-Regular.ttf') format('truetype');
+
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'NeutraText', 'Calibre', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  padding: 0rem 3rem;
+}
+
+section:not([id]) {
+  margin: 1em 0;
+  padding: 1em 0;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-bottom: 0.05em;
+}
+
+section h4 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-bottom: 0.1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+section h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+section p {
+  margin-top: 0;
+}
+
+nav {
+  position: relative;
+  font-family:'NeutraText';
+  font-weight: normal;
+  font-size:1.07rem;
+  font-size-adjust: 100%;
+  text-align: center;
+  letter-spacing: 0.08rem;
+  margin-left: -2rem;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+}
+
+@media (min-width: 40em) {
+  nav{
+    top: 0em;
+    left: 0em;
+}
+  .header1{
+    padding-top: 2em;
+  }
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+section code {
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  display: block;
+}
+
+ul.citations {
+  margin-left: 0.25em;
+  padding-left: 0.25em;
+}
+
+ul.citations li {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 1em;
+}
+
+ul.citations li strong {
+  font-weight: normal;
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+  text-decoration: none;
+}
+
+.floatright {
+  float: right;
+}
+
+.floatleft {
+  float: left;
+}
+
+/*******************************************
+
+COLOR
+
+*******************************************/
+
+.offWhiteColor {
+  display:inline-block;
+  margin: 0em;
+  padding: 50px 0;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: #f6f5f2;
+}
+
+.darkGreyColor {
+  display:inline-block;
+  margin: 0em;
+  padding: 50px 0;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: #202021;
+}
+
+.goldColor {
+  display:inline-block;
+  margin: 0em;
+  padding: 50px 0;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: #cdbe8c;
+}
+
+/*******************************************
+
+INTERACTIVE ELEMENTS
+
+*******************************************/
+
+.button-nav {
+  display: inline-block;
+  padding-top: 2rem;
+  width: 100%;
+  color: #cdbe8c;
+  background: transparent;
+  text-decoration: none;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.button-nav {
+  display: inline-block;
+  padding-top:2rem;
+  width: 100%;
+  color: #cdbe8c;
+  background: transparent;
+  text-decoration: none;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.button-nav:hover, .button-nav:focus {
+  opacity: 0.5;
+}
+
+.button {
+  display: inline-block;
+  font-family: 'NeutraText'
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 1.1rem;
+  padding: 1.1rem 1.8rem 0.85rem 1.9rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  text-decoration: none;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.buttoncolor-Tap {
+  color: #0e5098;
+  background-color: #b6d6d4;
+  border-color: #0e5098;
+}
+
+.buttoncolor-Tap:focus, .buttoncolor-Tap:hover {
+  color: #b6d6d4;
+  background-color: #0e5098;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.buttoncolor-Kiehls {
+  color: #333333;
+  background-color: #dfdfdb;
+  border-color: #333333;
+}
+
+.buttoncolor-Kiehls:focus, .buttoncolor-Kiehls:hover {
+  color: #dfdfdb;
+  background-color: #333333;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.buttoncolor-Gusto {
+  color: #125a2f;
+  background-color: #bbd7c9;
+  border-color: #125a2f;
+}
+
+.buttoncolor-Gusto:focus, .buttoncolor-Gusto:hover {
+  color: #bbd7c9;
+  background-color: #125a2f;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+.buttoncolor-Shangrila {
+  color: #d32b2b;
+  background-color: #f6d8cd;
+  border-color: #d32b2b;
+}
+
+.buttoncolor-Shangrila:focus, .buttoncolor-Shangrila:hover {
+  color: #f6d8cd;
+  background-color: #d32b2b;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+
+
+/*******************************************
+
+TEXT ELEMENTS
+
+*******************************************/
+
+.heading1 {
+  font-family: 'NeutraText';
+  font-weight: bold;
+  font-size: 2.05rem;
+  color: #383838;
+}
+
+.heading2 {
+  font-family: 'NeutraText';
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #919191;
+}
+
+.heading3 {
+  font-family: 'NeutraText';
+  font-weight: bold;
+  font-size: 1.025rem;
+  color: #202021;
+}
+
+.heading3color-Tap {
+  color: #0e5098;
+}
+
+.heading3color-Kiehls {
+  color: #333333;
+}
+
+.heading3color-Gusto {
+  color: #125a2f;
+}
+
+.heading3color-Shangrila {
+  color: #d32b2b;
+}
+
+.paragraph {
+  font-family: 'Calibre';
+  font-weight: normal;
+  font-size: 1.1188rem; 
+  text-align: left;
+  max-width: 50rem;
+  color: #202021;
+  padding-bottom:1.2rem;
+}
+
+img.project-screen {
+  float: right;
+  clear: both;
+  position: absolute;
+  max-width: 32.81rem;
+  height: auto;
+  padding-right:1rem;
+  margin: -11.75rem 0rem 0rem -6rem;
+  opacity: 1;
+}
+
+.project-bg {
+  position: relative;
+  clear: both;
+  width: 80%;
+  padding-bottom: 14.75%;
+  margin: 0rem auto 10rem auto;
+  z-index: 8;
+}
+
+.bgcolor-Tap {
+  background: #b6d6d4;
+}
+
+.bgcolor-Kiehls {
+  background: #dfdfdb;
+}
+
+.bgcolor-Gusto {
+  background: #bbd7c9;
+}
+
+.bgcolor-Shangrila {
+  background: #f6d8cd;
+  margin: 0rem auto 3.5rem auto;
+}
+
+.line {
+  height:5.5rem;
+  width: 1.017px; /*pixels so it doesn't change size when readjusting viewport*/
+  justify-content: center;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 9;
+}
+
+.line:nth-child(1) { /*determines which child overlaps, in this case its the first one*/
+  position: relative;
+  top: -50px;
+}
+
+.linecolor-Tap {
+  background-color: #0e5098;
+}
+
+.linecolor-Kiehls {
+  background-color: #333333;
+}
+
+.linecolor-Gusto {
+  background-color: #125a2f;
+}
+
+.linecolor-Shangrila {
+  background-color: #d32b2b;
+}
+
+.project-name {
+  font-family: 'NeutraText';
+  text-align: center;
+  margin: 3.3rem auto;
+}
+
+.namecolor-Tap {
+  color: #0e5098;
+}
+
+.namecolor-Kiehls {
+  color: #333333;
+}
+
+.namecolor-Gusto {
+  color: #125a2f;
+}
+
+.namecolor-Shangrila {
+  color: #d32b2b;
+}
+
+p.project-description {
+  font-family: 'Calibre';
+  font-weight: bolder;
+  font-size: 1.188rem;
+  text-align: left;
+  margin: 5rem auto 1.75rem 5rem;
+  clear: both;
+}
+
+p.descriptioncolor-Tap {
+  color: #0e5098;
+}
+
+p.descriptioncolor-Kiehls {
+  color: #333333;
+}
+
+p.descriptioncolor-Gusto {
+  color: #125a2f;
+}
+
+p.descriptioncolor-Shangrila {
+  color: #d32b2b;
+}
+
+p.project-type {
+  display: inline;
+  clear: both;
+  font-family: 'NeutraText';
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 2.25rem;
+}
+
+p.typecolor-Tap {
+  color: #0e5098;
+}
+
+p.typecolor-Kiehls {
+  color: #333333;
+}
+
+p.typecolor-Gusto {
+  color: #125a2f;
+}
+
+p.typecolor-Shangrila {
+  color: #d32b2b;
+}
+
+.ulist {
+  font-family: 'Calibre';
+  font-weight: normal;
+  color: #202021;
+  line-height: 1.25rem;  
+}
+
+.olist {
+  font-family: 'Calibre';
+  font-weight: normal;
+  color: #202021;
+  line-height: 1.25rem;
+}
+
+
+/*******************************************
+
+PAGE SPECIFIC STYLING 
+
+*******************************************/
+
+
+/* HOME SPECIFIC STYLING */
+
+h4.project-name {
+  font-family: 'NeutraText';
+  font-size:2.75rem;
+  letter-spacing: 0.07rem;
+  text-align: center;
+  margin: 3.3rem auto;
+}
+
+.namecolor-Tap {
+  color: #0e5098;
+}
+
+.namecolor-Kiehls {
+  color: #333333;
+}
+
+.namecolor-Gusto {
+  color: #125a2f;
+}
+
+.namecolor-Shangrila {
+  color: #d32b2b;
+}
+
+p.project-description {
+  font-family: 'Calibre';
+  font-size: 1.188rem;
+  text-align: left;
+  margin: 5rem auto 1.75rem 5rem;
+  clear: both;
+}
+
+p.descriptioncolor-Tap {
+  color: #0e5098;
+}
+
+p.descriptioncolor-Kiehls {
+  color: #333333;
+}
+
+p.descriptioncolor-Gusto {
+  color: #125a2f;
+}
+
+p.descriptioncolor-Shangrila {
+  color: #d32b2b;
+}
+
+p.project-type {
+  display: inline;
+  clear: both;
+  font-family: 'NeutraText';
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 6rem;
+}
+
+p.typecolor-Tap {
+  color: #0e5098;
+}
+
+p.typecolor-Kiehls {
+  color: #333333;
+}
+
+p.typecolor-Gusto {
+  color: #125a2f;
+}
+
+p.typecolor-Shangrila {
+  color: #d32b2b;
+}
+
+
+img.clientlogo {
+  max-width: 5%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.line {
+  height:5.5rem;
+  width: 1.017px; /*pixels so it doesn't change size when readjusting viewport*/
+  justify-content: center;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 9;
+}
+
+.line:nth-child(1) { /*determines which child overlaps, in this case its the first one*/
+  position: relative;
+  top: -50px;
+}
+
+.linecolor-Tap {
+  background-color: #0e5098;
+}
+
+.linecolor-Kiehls {
+  background-color: #333333;
+}
+
+.linecolor-Gusto {
+  background-color: #125a2f;
+}
+
+.linecolor-Shangrila {
+  background-color: #d32b2b;
+}
+
+img.project-screen {
+  float: right;
+  clear: both;
+  position: absolute;
+  max-width: 32.81rem;
+  height: auto;
+  padding-right:1rem;
+  margin: -11.75rem 0rem 0rem -6rem;
+  opacity: 1;
+}
+
+.project-bg {
+  position: relative;
+  clear: both;
+  width: 80%;
+  padding-bottom: 14.75%;
+  margin: 0rem auto 10rem auto;
+  z-index: 8;
+}
+
+.bgcolor-Tap {
+  background: #b6d6d4;
+}
+
+.bgcolor-Kiehls {
+  background: #dfdfdb;
+}
+
+.bgcolor-Gusto {
+  background: #bbd7c9;
+}
+
+.bgcolor-Shangrila {
+  background: #f6d8cd;
+  margin: 0rem auto 3.5rem auto;
+}
+
+
+/*PROJECT PAGES SPECIFIC STYLING*/
+
+.pitchbg {
+  width: 100%;
+  margin-top: -1.5rem;
+}
+
+.pitchbgcolor-Tap {
+  background-color: #b6d6d4
+}
+
+.pitchtext {
+  font-family: 'Calibre';
+  font-weight: bold;
+  font-size: 1.188rem;
+  line-height: 1.5rem;
+  text-align: left;
+  padding: 3.5rem 20rem 2.9rem 20rem;
+}
+
+.pitchtextcolor-Tap {
+  color: #0e5098;
+}
+
+
+/*iPhone 4 and other very small devices*/
+@media only screen and (max-width: 320px) { 
+  p.intro {
+    font-size:1.5rem;
+    letter-spacing: 0.085rem;
+    line-height: 2.25rem;
+    max-width: 85%;
+    margin: 5rem auto;
+  }
+
+  div h1.project-name {
+    font-size:1.5rem;
+    letter-spacing: 0.085rem;
+  }
+
+  p.project-description {
+    margin: -2.3rem 0.8rem 1rem 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  div p.project-type {
+    display: block;
+    padding: 0rem;
+    margin: 0.25rem 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 0%;
+    width:90%;
+    position: relative;
+  }
+
+  div img.project-screen {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin: 0rem auto;
+    padding: 1rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    display: block;
+    margin: 16rem auto 7rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    clear:both;
+  }
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 479px) { 
+  p.intro {
+    font-size:1.5rem;
+    letter-spacing: 0.085rem;
+    line-height: 2.25rem;
+    max-width: 85%;
+    margin: 5rem auto;
+  }
+
+  div h1.project-name {
+    font-size:1.5rem;
+    letter-spacing: 0.09rem;
+    line-height: 1.75rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  p.project-description {
+    margin: -2.3rem 0.8rem 1.5rem 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  div p.project-type {
+    display: block;
+    padding: 0rem;
+    margin: 1rem 0.8rem 1rem 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 0rem;
+    width: 90%;
+    position: relative;
+  }
+
+  div img.project-screen {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0rem auto;
+    position: relative;
+    padding: 1rem;
+    clear: both;
+  }
+
+  div a.button {
+    display: block;
+    margin: 2rem auto 0rem auto;
+    text-align: center;
+    font-size: 1rem;
+    clear:both;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) { 
+  p.intro {
+    font-size:1.75rem;
+    letter-spacing: 0.09rem;
+    line-height: 2.6rem;
+    max-width: 80%;
+    margin: 9.7rem auto 8.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size:1.75rem;
+    letter-spacing: 0.09rem;
+    line-height: 1.75rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  p.project-description {
+    margin: -2.3rem 0.8rem 1.5rem 0.8rem;
+    padding-right: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  div p.project-type {
+    display: block;
+    padding: 0rem;
+    margin: 1rem 0.8rem 1rem 0.8rem;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 0rem;
+    width: 90%;
+    position: relative;
+  }
+
+  div img.project-screen {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin: 0rem auto;
+    padding: 1rem;
+    position: relative;
+    clear:both;
+  }
+
+  div a.button {
+    display: block;
+    margin: 2rem auto 0rem auto;
+    text-align: center;
+    font-size: 1.15rem;
+    clear: both;
+  }nm
+}
+
+@media only screen and (min-width: 640px) and (max-width: 700px) {
+  p.intro {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+    line-height: 2.9rem;
+    max-width: 75%;
+    margin: 9.7rem auto 8.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 0rem 0.8rem 1rem 2rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2rem;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 2.5rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    display: block;
+    max-width: 18rem;
+    height: auto;
+    margin: -7.5rem 1.15rem 0rem 0rem;
+    padding-left: 0.5rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2rem;
+    margin-bottom: 2.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 768px) {
+  p.intro {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+    line-height: 2.9rem;
+    max-width: 75%;
+    margin: 9.7rem auto 8.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 0rem 0.8rem 1rem 2rem;
+    padding-right: 2rem;
+    font-size: 1.05rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2rem;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 3.75rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    max-width: 20rem;
+    height: auto;
+    margin: -8.5rem 1.15rem 0rem 0rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 874px) {
+  p.intro {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+    line-height: 2.9rem;
+    max-width: 75%;
+    margin: 9.7rem auto 8.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.8rem 1rem 2.25rem;
+    padding-right: 1rem;
+    font-size: 1.05rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2.25rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 4.25rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    max-width: 21rem;
+    height: auto;
+    margin: -9.25rem 1.15rem 0rem 0rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2.25rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 875px) and (max-width: 991px) {
+  p.intro {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+    line-height: 3.3rem;
+    max-width: 70%;
+    margin: 9.7rem auto 8.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.8rem 1rem 2.25rem;
+    padding-right: 1.5rem;
+    font-size: 1.1rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2.25rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 8.5rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    max-width: 24rem;
+    height: auto;
+    margin: -9.75rem 1.15rem 0rem 0rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 1.25rem 2.25rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+}
+
+
+@media only screen and (min-width : 992px) and (max-width: 1111px){
+  p.intro {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+    line-height: 3.3rem;
+    max-width: 60%;
+    margin: 7.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.8rem 1rem 2.25rem;
+    font-size: 1.1rem;
+    max-width: 47%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2.25rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 7.25rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    max-width: 26.5rem;
+    height: auto;
+    margin: -8.75rem 1.15rem 0rem 0rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2.25rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+
+@media only screen and (min-width: 1112px) and (max-width: 1255px){
+  p.intro {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+    line-height: 3.3rem;
+    max-width: 60%;
+    margin: 7.35rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.8rem 1rem 6rem;
+    font-size: 1.1188rem;
+    max-width: 100%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 0rem 0rem 6rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 10rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    max-width: 30rem;
+    height: auto;
+    margin: -9.25rem 6rem 0rem 0rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 6rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1256px) {
+  p.intro {
+    font-size: 2.05rem;
+    letter-spacing: 0.099rem;
+    line-height: 3.3rem;
+    max-width: 60%;
+    margin: 10.35rem auto 11rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.75rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 5rem 0.8rem 1.5rem 6rem;
+    font-size: 1.1188rem;
+    max-width: 150%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 0rem 0rem 6rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 12rem;
+    width: 80%;
+    height: auto;
+  }
+
+  div img.project-screen {
+    max-width: 32.65rem;
+    height: auto;
+    margin: -10.5rem 5rem 0rem 0rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  div a.button {
+    margin: 1.75rem 0rem 0rem 6rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

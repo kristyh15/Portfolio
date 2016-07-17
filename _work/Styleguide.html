@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Style Guide</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styleguide.css">
+    <link rel="stylesheet" href="css/grid.css">
+
+
+
+  </head>
+
+  <body>
+
+    <h1>Style Guide</h1>
+
+
+    <nav>
+      
+      <p style="text-align:left">
+        On this page:
+      </p>
+      <ul style="text-align:left">
+         <li>
+          <a href="#colours">Colour Palette</a>
+        </li>
+        <li>
+          <a href="#interactive_elements">Interactive Elements</a>
+        </li>
+        <li>
+          <a href="#text_elements">Text Elements</a>
+        </li>
+        <li>
+          <a href="#combined_elements">Combined Elements</a>
+        </li>
+      </ul>
+
+      <p style="text-align:left">Other pages:</p>
+      <ul style="text-align:left">
+        <li><a href="wireframes.html">Wireframes</a>
+        <li><a href="Style_guide.html">Style Guide</a>
+      </ul>
+
+    </nav>
+<hr>
+<br>
+<!-- START COLOURS SECTION // -->
+  <section id="colours">
+
+    <h2> Colour Palette: </h2>
+      <section>
+        <div class="offWhiteColor"> 
+          <h3>Off White: #f6f5f2</h3>
+          <p>website background</p>
+        </div> 
+
+        <div class="darkGreyColor"> 
+          <h3> <span style="color:#f6f5f2"> Dark Grey: #202021 </span> </h3>
+          <p><span style="color:#f6f5f2"> project body text color</span></p>
+        </div> 
+
+        <div class="goldColor"> 
+          <h3> <span style="color:#f6f5f2"> Gold: #cdbe8c </span> </h3>
+          <p><span style="color:#f6f5f2"> main nav text color</span></p>
+        </div>         
+      </section>
+
+  </section>
+<!-- END OF COLOURS SECTION // -->
+<hr>
+<br>
+<!-- START INTERACTIVE ELEMENTS SECTION // -->
+
+    <!-- Navigation Button -->
+    <section id="interactive_elements">
+      <h2> <span style="color:grey">INTERACTIVE ELEMENTS SECTION</span></h2>
+
+      <section>
+        <h2>Main navigation</h2>
+
+        <h3>CSS selector:</h3>
+          <p>.button-nav</p>
+
+        <h3>Sample code:</h3>
+          <code>
+            a href="#" class="button"&gt;Navigation Button&lt;/a&gt;
+            &lt;div class="floatright grid-col-m-2of12 grid-col-1of12"&gt;
+              &lt;a class="button-nav" href="#"&gt;Contact&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class="floatright grid-col-m-2of12 grid-col-1of12"&gt;
+              &lt;a class="button-nav" href="#"&gt;About&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class="floatright grid-col-m-2of12 grid-col-1of12"&gt;
+              &lt;a class="button-nav" href="#">Projects&lt;/a&gt;
+            &lt;/div&gt;
+          </code> 
+
+        <h3>Rendered element:</h3>
+          <div class="floatright grid-col-m-2of12 grid-col-1of12" >
+            <a class="button-nav" href="#">Contact</a>
+          </div>
+
+          <div class="floatright grid-col-m-2of12 grid-col-1of12" >
+            <a class="button-nav" href="#">About</a>
+          </div>
+
+          <div class="floatright grid-col-m-2of12 grid-col-1of12" >
+            <a class="button-nav" href="#">Projects</a>
+          </div> 
+
+      </section>
+
+     <!-- Project specific buttons -->
+      <section>
+        <h2>Project specific buttons</h2>
+
+        <h3>CSS selector:</h3>
+          <p>.button</p>
+          <p>.buttoncolor-Tap</p>
+          <p>.buttoncolor-Kiehls</p>
+          <p>.buttoncolor-Gusto</p>
+          <p>.buttoncolor-Shangrila</p>
+
+        <h3>Sample code:</h3>
+          <code>
+            &lt;a class="button buttoncolor-Tap" href="#" &gt;View Project&lt;/a&gt;
+            &lt;a class="button buttoncolor-Kiehls" href="#" &gt;View Project&lt;/a&gt;
+            &lt;a class="button buttoncolor-Gusto" href="#" &gt;View Project&lt;/a&gt;
+            &lt;a class="button buttoncolor-Shangrila" href="#" &gt;View Project&lt;/a&gt;
+          </code> 
+
+        <h3>Rendered element:</h3>
+          <a class="button buttoncolor-Tap" href="#">View Project</a> 
+          <a class="button buttoncolor-Kiehls" href="#">View Project</a>
+          <a class="button buttoncolor-Gusto" href="#">View Project</a>
+          <a class="button buttoncolor-Shangrila" href="#">View Project</a>
+      </section>
+
+    </section>
+<!-- // END INTERACTIVE ELEMENTS SECTION -->
+
+<hr>
+<br>
+
+    <!-- START TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+    <h2> <span style="color:grey">TEXT ELEMENTS SECTION</span></h2>
+
+      <!-- Headings -->
+      <section>
+        <h2>Headings</h2>
+
+        <h3>CSS selector:</h3>
+       		<p>.heading1</p>
+       		<p>.heading2</p>
+       		<p>.heading3</p>
+
+        <h3>Sample code:</h3>
+        	<code>
+        		&lt;p href="#" class="heading1"&gt;Heading1&lt;/p&gt;
+        		&lt;p href="#" class="heading2"&gt;Heading2&lt;/p&gt;
+        		&lt;p href="#" class="heading3"&gt;Heading3&lt;/p&gt;
+        	</code>
+
+        <h3>Rendered Element:</h3>
+        	<p class="heading1" >Heading1</p>
+        	<p class="heading2" >Heading2</p>
+        	<p class="heading3 heading3color-Tap" >Heading3 for Tap Project</p>
+          <p class="heading3 heading3color-Kiehls" >Heading3 for Kiehls Project</p>
+          <p class="heading3 heading3color-Gusto" >Heading3 for Gusto Project</p>
+          <p class="heading3 heading3color-Shangrila" >Heading3 for Shangri-La Project</p>
+      </section>
+
+      <!-- Paragraphs -->
+      <section>
+        <h2>Paragraphs</h2>
+
+        <h3>CSS selector:</h3>
+        	<p>.paragraph</p>
+
+        <h3>Sample code:</h3>
+        	<code>
+        		&lt;p class="paragraph"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis egestas risus. Proin ut posuere lorem, auctor vehicula risus. Maecenas risus lacinia, laoreet nisl sit amet, fringilla tellus. Vestibulum ante ipsum primis in faucibus luctus et ultrices posuere cubilia Curae; Nunc urna ante, congue eu eros vel, elementum feugiat mi.&lt;/p&gt;
+        	</code>
+
+        <h3>Rendered Element:</h3>
+        	<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis egestas risus. Proin ut posuere lorem, auctor vehicula risus. Maecenas risus lacinia, laoreet nisl sit amet, fringilla tellus. Vestibulum ante ipsum primis in faucibus luctus et ultrices posuere cubilia Curae; Nunc urna ante, congue eu eros vel, elementum feugiat mi.</p>
+      </section>
+
+       <!-- Project Name -->
+      <section>
+        <h2>Project names</h2>
+
+        <h3>CSS selector:</h3>
+          <p>.project-name</p>
+          <p>.namecolor-Tap</p>
+          <p>.namecolor-Kiehls</p>
+          <p>.namecolor-Gusto</p>
+          <p>.namecolor-Shangrila</p>
+
+        <h3>Sample code:</h3>
+          <code>
+            &lt;h1 class="project-name namecolor-Tap"&gt;Tap project name&lt;/h1&gt;
+          </code>
+
+        <h3>Rendered Element:</h3>
+          <h4 class="project-name namecolor-Tap">Tap project name</h4>
+          <h4 class="project-name namecolor-Kiehls">Kiehls project name</h4>
+          <h4 class="project-name namecolor-Gusto">Gusto project name</h4>
+          <h4 class="project-name namecolor-Shangrila">Shangrila project name</h4>
+
+      </section>
+
+      <!-- Bulleted Lists -->
+      <section>
+        <h2>Bulleted Lists</h2>
+
+        <h3>CSS selector:</h3>
+        	<p>.ulist</p>
+
+        <h3>Sample code:</h3>
+        	<code>
+        		&lt;ul class="ulist"&gt;
+					    &lt;li&gt; an item on this list &lt;/li&gt;
+        			&lt;li&gt; an item on this list &lt;/li&gt;
+        			&lt;li&gt; an item on this list &lt;/li&gt;
+        		&lt;/ul&gt;
+        	</code>
+
+        <h3>Rendered Element:</h3>
+        	<ul class="ulist"> 
+				    <li> an item on this list </li>
+        		<li> an item on this list </li>
+        		<li> an item on this list </li>
+        	</ul>
+      </section>
+
+      <!-- Numbered Lists -->
+      <section>
+        <h2>Numbered Lists</h2>
+
+        <h3>CSS selector:</h3>
+        	<p>.olist</p>
+
+        <h3>Sample code:</h3>
+        	<code>
+        		&lt;ol class="olist"&gt;
+					&lt;li&gt; first item on this list &lt;/li&gt;
+        			&lt;li&gt; second item on this list &lt;/li&gt;
+        			&lt;li&gt; third item on this list &lt;/li&gt;
+        		&lt;/ol&gt;
+        	</code>
+
+        <h3>Rendered Element:</h3>
+       		<ol class="olist"> 
+				    <li> first item on this list </li>
+        		<li> second item on this list </li>
+        		<li> third item on this list </li>
+        	</ol>
+      </section>
+
+    </section>
+    <!-- // END TEXT ELEMENTS SECTION -->
+
+<hr>
+<br>
+
+    <!-- START COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+    <h2> <span style="color:grey"> COMBINED ELEMENTS SECTION </span> </h2>
+
+      
+
+      <!-- Product Listing -->
+      <section>
+        <h2>Product Listing</h2>
+
+        <h3>CSS selector:</h3>
+          <p>.project-name</p>
+          <p>.namecolor-Tap</p>
+          <p>.namecolor-Kiehls</p>
+          <p>.namecolor-Gusto</p>
+          <p>.namecolor-Shangrila</p>
+          <p>.project-bg</p>
+          <p>.bgcolor-Tap</p>
+          <p>.bgcolor-Kiehls</p>
+          <p>.bgcolor-Gusto</p>
+          <p>.bgcolor-Shangrila</p>
+          <p>.line</p>
+          <p>.linecolor-Tap</p>
+          <p>.linecolor-Kiehls</p>
+          <p>.linecolor-Gusto</p>
+          <p>.linecolor-Shangrila</p>
+          <p>.project-description</p>
+          <p>.descriptioncolor-Tap</p>
+          <p>.descriptioncolor-Kiehls</p>
+          <p>.descriptioncolor-Gusto</p>
+          <p>.descriptioncolor-Shangrila</p>
+          <p>.project-type</p>
+          <p>.typecolor-Tap</p>
+          <p>.typecolor-Kiehls</p>
+          <p>.typecolor-Gusto</p>
+          <p>.typecolor-Shangrila</p>
+
+        <h3>Sample code:</h3>
+        	<code>
+            &lt;div class="grid-col-m-12of12 grid-col-12of12"&gt;
+              &lt;h1 class="project-name namecolor-Tap">Tap&lt;/h1&gt;
+            &lt;/div&gt;
+
+            &lt;div class="grid-col-m-12of12 grid-col-12of12" style="position: relative;"&gt;
+              &lt;div class="project-bg bgcolor-Tap"&gt;
+                &lt;figure class="line linecolor-Tap"&gt;&lt;/figure&gt;
+
+                &lt;div&gt;
+
+                  &lt;div class="grid-col-m-11of12 grid-col-5of12"&gt;
+                    &lt;p class="project-description descriptioncolor-Tap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget molestie diam.&lt;/p&gt;
+                    &lt;p class="project-type typecolor-Tap grid-col-m-12of12 grid-col-6of12"&gt; Project Type: Interaction, Service &lt;/p&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="grid-col-m-5of12 grid-col-5of12 floatright"&gt;
+                    &lt;img class="project-screen" src="img/home-Tap.png" alt="Tap dashboard and signup"&gt;
+                  &lt;/div&gt;
+
+                  &lt;div class="grid-col-m-7of12 grid-col-6of12"&gt;
+                    &lt;a class="button buttoncolor-Tap" href="#">View Project&lt;/a&gt;
+                  &lt;/div&gt;
+
+                &lt;/div&gt;
+
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/code&gt;
+        </code>
+
+        <h3>Rendered Element:</h3>
+        <!--start Tap-->
+            <div class="grid-col-m-12of12 grid-col-12of12">
+              <h4 class="project-name namecolor-Tap">Tap</h4>
+            </div>
+
+            <div class="grid-col-m-12of12 grid-col-12of12" style="position: relative;">
+              <div class="project-bg bgcolor-Tap">
+                <figure class="line linecolor-Tap"></figure>
+
+                <div>
+
+                  <div class="grid-col-m-11of12 grid-col-5of12">
+                    <p class="project-description descriptioncolor-Tap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget molestie diam.</p>
+                    <p class="project-type typecolor-Tap grid-col-m-12of12 grid-col-6of12"> Project Type: Interaction, Service </p>
+                  </div>
+
+                  <div class="grid-col-m-5of12 grid-col-5of12 floatright">
+                    <img class="project-screen" src="img/home-Tap.png" alt="Tap dashboard and signup">
+                  </div>
+
+                  <div class="grid-col-m-7of12 grid-col-6of12">
+                    <a class="button buttoncolor-Tap" href="#">View Project</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+        <!--end Tap-->
+
+
+        <!--start Kiehls-->
+            <div class="grid-col-m-12of12 grid-col-12of12">
+              <h4 class="project-name namecolor-Kiehls">Enriching the Kiehl's Experience</h4>
+            </div>
+
+            <div class="grid-col-m-12of12 grid-col-12of12" style="position: relative;">
+              <div class="project-bg bgcolor-Kiehls">
+                <figure class="line linecolor-Kiehls"></figure>
+
+                <div>
+
+                  <div class="grid-col-m-11of12 grid-col-5of12">
+                    <p class="project-description descriptioncolor-Kiehls">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget molestie diam.</p>
+                    <p class="project-type typecolor-Kiehls grid-col-m-12of12 grid-col-6of12"> Project Type: Interaction, Service </p>
+                  </div>
+
+                  <div class="grid-col-m-5of12 grid-col-5of12 floatright">
+                    <img class="project-screen" src="img/home-Kiehls.png" alt="Kiehs app">
+                  </div>
+
+                  <div class="grid-col-m-7of12 grid-col-6of12">
+                    <a class="button buttoncolor-Kiehls" href="#">View Project</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+        <!--end Kiehls-->
+
+        <!--start Gusto-->
+            <div class="grid-col-m-12of12 grid-col-12of12">
+              <h4 class="project-name namecolor-Gusto">Gusto</h4>
+            </div>
+
+            <div class="grid-col-m-12of12 grid-col-12of12" style="position: relative;">
+              <div class="project-bg bgcolor-Gusto">
+                <figure class="line linecolor-Gusto"></figure>
+
+                <div>
+
+                  <div class="grid-col-m-11of12 grid-col-5of12">
+                    <p class="project-description descriptioncolor-Gusto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget molestie diam.</p>
+                    <p class="project-type typecolor-Gusto grid-col-m-12of12 grid-col-6of12"> Project Type: UI/UX </p>
+                  </div>
+
+                  <div class="grid-col-m-5of12 grid-col-5of12 floatright">
+                    <img class="project-screen" src="img/home-Gusto.png" alt="Gusto app">
+                  </div>
+
+                  <div class="grid-col-m-7of12 grid-col-6of12">
+                    <a class="button buttoncolor-Gusto" href="#">View Project</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+        <!--end Gusto-->
+
+        <!--start Shangri-La-->
+            <div class="grid-col-m-12of12 grid-col-12of12">
+              <h4 class="project-name namecolor-Shangrila">A Tailored Experience at Shangri-La</h4>
+            </div>
+
+            <div class="grid-col-m-12of12 grid-col-12of12" style="position: relative;">
+              <div class="project-bg bgcolor-Shangrila">
+                <figure class="line linecolor-Shangrila"></figure>
+
+                <div>
+
+                  <div class="grid-col-m-11of12 grid-col-5of12">
+                    <p class="project-description descriptioncolor-Shangrila">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget molestie diam.</p>
+                    <p class="project-type typecolor-Shangrila grid-col-m-12of12 grid-col-6of12"> Project Type: Interaction, Service </p>
+                  </div>
+
+                  <div class="grid-col-m-5of12 grid-col-5of12 floatright">
+                    <img class="project-screen" src="img/home-Shangrila.png" alt="Shangri-La app">
+                  </div>
+
+                  <div class="grid-col-m-7of12 grid-col-6of12">
+                    <a class="button buttoncolor-Shangrila" href="#">View Project</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+        <!--end Shangri-La-->
+
+      </section>
+
+      <!-- Grid -->
+
+      <section>
+        <h2>Grid</h2>
+
+        <h3>Rendered Element:</h3>
+        <p class="grid"></p>
+        <figure>
+          <img src="img/grid_4K.jpg" alt="4K grid">
+          <figcaption>9 column grid</figcaption>
+        </figure>
+        <figure>
+          <img src="img/grid_smartphone.jpg" alt="Smartphone grid">
+          <figcaption>3 column grid</figcaption>
+        </figure>
+        <figure>
+          <img src="img/grid_smartwatch.jpg" alt="Smartwatch grid">
+          <figcaption>2 column grid</figcaption>
+        </figure>
+      </section>
+
+
+
+    </section>
+    <!-- // END COMBINED ELEMENTS SECTION -->
+
+    <!-- 
+      HTML5shiv allows IE below version 9 to work with HTML5 elements.
+      Note the conditionals before and after that do not load this script 
+      if browser is greater-than or equal-to IE9.
+    -->
+    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <!-- 
+      Because we don't want our Javascript to try and adjust the page
+      until after it loads, it is important that it be the last thing
+      we link on the page
+    -->
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="js/respond.js"></script>
+
+
+  </body>
+</html>
