@@ -178,11 +178,88 @@ div video {
   left:0;
   right:0;
   z-index: -1;
-  margin-top: -3rem;
   -webkit-filter: brightness(53%);
 }
 
-.vidprojecttitle {
+.vidcontainer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  margin: 0rem auto;
+  z-index: 8;
+}
+
+/*div video {
+  pointer-events: none;
+}*/
+
+video::-webkit-media-controls-start-playback-button { /*hides native iOS play button*/
+  display: none;
+}
+
+
+
+
+/*.vidprojecttitle {
+  position: absolute;
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 6.5rem;
+  text-align: center;
+  letter-spacing: 0.07rem;
+  color: #f6f5f2;
+  transform-origin: center;
+  top: 26.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vidprojecttype {
+  position: absolute;
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size:1.65rem;
+  text-align: center;
+  letter-spacing: 0.07rem;
+  color: #f6f5f2;
+  transform-origin: center;
+  top: 48.5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+.watchvideo {
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left:0;
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 1rem;
+  color: #f6f5f2;
+  text-align: center;
+  text-decoration: none;
+  margin: 1.75rem 5rem;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-color: #f6f5f2;
+  background-color: transparent;
+}
+
+.watchvideo:focus, .watchvideo:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+
+h1.vidprojecttitle {
   position: absolute;
   font-family: 'SofiaPro-SemiBold';
   font-weight: normal;
@@ -213,28 +290,32 @@ div video {
 }
 
 
+
+
+
 /*******************************************
 
-TEXT
+LISTS
 
 *******************************************/
 
-.paragraph {
+/*li {
   font-family: 'Calibre';
   font-weight: normal;
-  font-size: 0.85rem; 
+  font-size: 1rem;
   text-align: left;
-  max-width: 30rem; /*line length*/
   color: #202021;
-  padding-bottom:1.2rem;
-}
+}*/
 
-li {
+/*li {
   font-family: 'Calibre';
   font-weight: normal;
-  font-size: 0.85rem;
+  font-size: 1.03rem;
+  line-height: 150%;
   text-align: left;
-}
+  color: #202021;
+  margin: -1rem 0rem 1rem -1rem;
+}*/
 
 /*unordered list*/
 .ulist {
@@ -245,6 +326,34 @@ li {
 /*ordered list*/
 .olist {
   color: #202021;
+}
+
+/*ul:before{
+  font-family:'Calibre';
+  content:attr(aria-label);
+  font-size:120%;
+}*/
+
+ul.list {
+  font-family: 'Calibre';
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: left;
+  max-width: 50%;
+  color: #202021;
+  margin: -1rem auto 1rem auto;
+}
+
+dl.paragraph {
+  margin-top: -0.75rem;
+}
+
+dd {
+  display: list-item;
+  list-style-type: disc;
+  font-size:1.05rem;
+  max-width: 75%;
 }
 
 
@@ -551,7 +660,7 @@ img.project-screen {
 
 .bgcolor-Shangrila {
   background: #f6d8cd;
-  /*margin: 0rem auto 3.5rem auto;*/
+  margin-bottom: 2rem;
 }
 
 
@@ -564,7 +673,7 @@ PROJECT PAGES SPECIFIC STYLING
 .pitchbg {
   width: 100%;
   margin-top: -1.5rem;
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
 }
 
 .pitchbgcolor-Gusto {
@@ -583,13 +692,22 @@ PROJECT PAGES SPECIFIC STYLING
   background-color: #f6d8cd;
 }
 
-.pitchtext {
+/*.pitchtext {
   font-family: 'Calibre';
   font-weight: normal;
   font-size: 1.188rem;
-  line-height: 1.55rem;
+  line-height: 140%;
   text-align: left;
-  padding: 3.5rem 23rem 2.9rem 23rem;
+  padding: 4.5% 24.95% 4% 24.95%;
+}*/
+
+.pitchtext {
+  font-family: 'Calibre';
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 140%;
+  text-align: left;
+  padding: 4.5% 24.95% 4% 24.95%;
 }
 
 .pitchtextcolor-Tap {
@@ -604,7 +722,7 @@ h2 { /*for Process and Result*/
   text-align: center;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-  margin: 3.5rem auto;
+  margin: 4.5rem auto 3.5rem auto;
   clear: both;
 }
 
@@ -625,6 +743,27 @@ h2.heading2color-Shangrila {
   color: #d32b2b;
 }
 
+.subheadings { /*for section titles*/
+  font-family: 'SofiaPro-Bold';
+  font-weight: normal;
+  font-size: 0.88rem;
+  color: #202021;
+  text-align: left;
+  letter-spacing: 0.04rem;
+  margin: 3rem 0rem 1rem 0rem;
+}
+
+.roleteam {
+  float: right;
+  font-family: 'Calibre';
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  text-transform: initial;
+  color: #202021;
+  margin: 0rem auto 1.1rem auto;
+}
+
 h3 { /*for section titles*/
   display: block;
   font-family: 'SofiaPro-Bold';
@@ -633,7 +772,7 @@ h3 { /*for section titles*/
   text-align: center;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  margin: 1.75rem auto 1rem auto;
+  margin: 2.5rem auto 0.8rem auto;
   clear: right;
 }
 
@@ -653,18 +792,34 @@ h3.heading3color-Shangrila {
   color: #d32b2b;
 }
 
+/*h4 { /*for section titles*/
+/*  display: block;
+  font-family: 'SofiaPro-Bold';
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #202021;
+  text-align: left;
+  letter-spacing: 0.04rem;
+  margin: 1.8rem auto 0.8rem 15rem;
+  clear: right;
+}*/
+
 .paragraph {
   display: block;
   font-family: 'Calibre';
   font-weight: normal;
-  font-size: 1.15rem;
-  line-height: 137%;
+  font-size: 1.25rem;
+  line-height: 140%;
   text-align: left;
-  max-width: 55%;
+  max-width: 50%;
   color: #202021;
-  margin: 0 auto;
+  margin: 0rem auto 1.25rem auto;
 }
 
+img.Tap-knowusers {
+  margin: -14.5rem auto -14rem auto;
+  transform: scale(0.3); /*resize image from center instead of top-left corner*/
+}
 
 /*******************************************
 
