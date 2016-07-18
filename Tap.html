@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/grid.css">
   </head>
 
+
   <body>
 
 
@@ -26,7 +27,7 @@
 
 
 <!--start navigation menu-->
-  <header id="header" class="header--fixed hide-from-print headroom heardroom--not-bottom headroom-not-top headroom--unpinned headroom headroom--pinned" role="banner">
+  <header id="header" class="header--fixed hide-from-print headroom heardroom--not-bottom headroom-not-top headroom--unpinned headroom headroom--pinned">
     <nav class="grid-row">
 
       <div class="floatright grid-col-m-2of12 grid-col-1of12" >
@@ -48,17 +49,52 @@
   <div class="grid-row">
 
 <!--start video-->
-    <div class="grid-col-m-12of12 grid-col-12of12" style="position:relative">
-    
-      <video poster="img/Tap.png" autoplay muted loop controls>
+
+  <div class="grid-col-m-12of12 grid-col-12of12" style="position:relative">
+    <div class="vidcontainer">
+
+    <div>
+  
+      <video autoplay muted loop>
         <source src="https://vimeo.com/123837496">
         <source src="video/Tap.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
       </video>
 
+      <div class="grid-col-m-12of12 grid-col-12of12">
         <h1 class="vidprojecttitle">Tap</h1>
-        <p class="vidprojecttype"> interaction design, service design </p>
+        <p class="vidprojecttype grid-col-m-12of12 grid-col-12of12"> interaction design, service design </p>
+      </div>
+
+      <div class="grid-col-m-12of12 grid-col-12of12">
+        <a class="no-touchevents touchevents watchvideo" href="Tap.html">Watch Video</a>
+      </div>
+
     </div>
+
+  </div>
+
+
+
+<!--     <div class="grid-col-m-12of12 grid-col-12of12" style="position:relative">
+      <div class="project-bg bgcolor-Kiehls">
+
+        <div>
+
+          <div class="grid-col-m-12of12 grid-col-12of12">
+            <h1 class="vidprojecttitle">Tap</h1>
+            <p class="vidprojecttype grid-col-m-12of12 grid-col-12of12"> interaction design, service design </p>
+          </div>
+
+          <div class="grid-col-m-12of12 grid-col-12of12">
+            <a class="no-touchevents touchevents watchvideo" href="Tap.html">Watch Video</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div> -->
+          
 <!--end video-->
 
 <!--start pitch-->
@@ -70,13 +106,13 @@
 
 
 <!--start role and team-->
-      <div class="grid-col-m-12of12 grid-col-12of12">
+    <!--  <div class="grid-col-m-12of12 grid-col-12of12">
         <p class="roleteam"> <span class="subheadings"> Role: </span> <br> Research, Ideation, UI/UX Design </p>
       </div>
 
       <div class="grid-col-m-12of12 grid-col-12of12">
         <p class="roleteam"> <span class="subheadings"> Team: </span> <br> Kristy Hung, Stevie T.A. Nguyen </p>
-      </div>
+      </div> -->
 <!--end role and team-->
 
 
@@ -84,8 +120,6 @@
     <div class="grid-col-m-12of12 grid-col-12of12">
       <h2 class="heading2color-Tap">Process</h2>
     </div>
-
-    <div class="grid-col-m-12of12 grid-col-12of12">
 
       <div>
         <h3 class="heading3color-Tap">The Brief</h3>
@@ -104,14 +138,7 @@
       </div>
 
       <div>
-        <p class="paragraph"> <span class="subheadings"> Ethnography </span> <br> Ethnography sessions were conducted infrequently over the course of 10 weeks. Data was collected through methods of on-site visits and observation, note taking, audio and video recording, photography, and informal interviews with bartenders and patrons. As a result, we were able to identify behavioural patterns and reccuring themes that help define the culture around being a bartender. </p>
-       <!--  <br><br>Key findings about Clough Club's bartenders:</p>
-          <ul class="list">
-            <li>Prepares the bar two hours before opening hours</li>
-            <li>Primarily interacts with customers rather than other staff members when working</li>
-            <li>Gives directions to tourists visiting the bar</li>
-            <li>Talks to regulars about preparing for their upcoming cocktail competitions</li>
-          </ul> -->
+        <p class="paragraph"> <span class="subheadings"> Ethnography </span> <br> Conducted over ten weeks, data was collected through on-site visits and observation, note taking, audio and video recording, photography, and informal interviews with bartenders and patrons. As a result, we were able to identify behavioural patterns and reccuring themes that help define the culture around being a bartender. </p>
 
         <dl class="paragraph">
           <dt>Key findings about Clough Club's bartenders:</dt>
@@ -121,18 +148,6 @@
             <dd>Talks to regulars about preparing for their upcoming cocktail competitions</dd>
         </dl>
 
-<!--  
-        <figure>
-          <figcaption class="listtitle"> Key findings about Clough Club's bartenders:</figcaption>
-          <ul class="paragraph">
-            <li>Prepares the bar two hours before opening hours.</li>
-            <li>Primarily interacts with customers rather than other staff members when working.</li>
-            <li>Gives directions to tourists visiting the bar.</li>
-            <li>Talks to regulars about preparing for their upcoming cocktail competitions.</li>
-          </ul>
-        </figure>
-  -->
-
 <!-- 
         <ul class="paragraph" aria-label="Key findings about Clough Club's bartenders:"> 
           <li>Prepares the bar two hours before opening hours.</li>
@@ -141,18 +156,19 @@
           <li>Talks to regulars about preparing for their upcoming cocktail competitions.</li>
         </ul>
 -->
-
-<!--    <ul>
-          <li>Prepares the bar two hours before opening hours.</li>
-          <li>Primarily interacts with customers rather than other staff members when working.</li>
-          <li>Gives directions to tourists visiting the bar.</li>
-          <li>Talks to regulars about preparing for their upcoming cocktail competitions.</li>
-        </ul> 
--->
       </div>
 
       <div>
         <p class="paragraph"> <span class="subheadings"> Cultural Probes </span> <br> Each cultural probe contained 3 magnets with tabs to tally good, average, and bad days, 1 cocktail and bar-themed Mad Libs shareable notepad, 1 pen, 1 green and brown leather wallet for personal receipts, and 1 green leather bound personal cocktail recipe notebook. As a result, we learned about with whom and how they spend their time and money.</p>
+
+        <dl class="paragraph" style="position:relative;">
+          <dt>Key findings about both bartenders’ experiences:</dt>
+            <dd>Spent a lot of time developing competition drinks</dd>
+            <dd>Went to a bar in Seattle and the bartender there gave a bottle of wine to them only, making them feel special</dd>
+            <dd>Memorable experience because they felt special</dd>
+            <dd>Gave the bartender 30% in tips for his special service</dd>
+        </dl>
+
       </div>
 
       <div>
@@ -160,20 +176,17 @@
         <p class="paragraph"> 
           <span class="subheadings"> Participatory Workshop </span> 
           <br> 
-            During both 2 hour sessions, participants were given a toolkit and were instructed to assemble 2D and 3D collages based on a scenario given to them. Both participants were bartenders employed at Clough Club. The results from this workshop helped us understand both participants as a bartender and as a customer. Not only did these generate insights that helped identify values paths that facilitate customer retention, but it also futhered our knowledge in the bartending culture.
-          <img class="centerimg grid-col-m-12of12 grid-col-12of12" src="img/Tap-participatoryworkshop.png" alt="Participatory workshop">
+            During both two hour sessions, participants were given a toolkit and were instructed to assemble 2D and 3D collages based on a scenario given to them. Both participants were bartenders employed at Clough Club. The results helped us understand both participants as a bartender and as a customer. Not only did these generate insights that helped identify values paths that facilitate customer retention, but it also futhered our knowledge in the bartending culture.
+            <img class="centerimg grid-col-m-12of12 grid-col-12of12" src="img/Tap-participatoryworkshop.png" alt="Participatory workshop">
         </p>
       </div>
 
-
       <div>
-        <h3 class="heading3color-Tap">Discovering Patterns</h3>
-          <p class="paragraph">For this 12 week long interaction design project, we were tasked to design anything for an existing social group of our choice as the client. We would identify pain and pleasure points within the B2C environment and pinpoint opportunities to shape a design that meets those needs while bringing value to both the company's brand and strengthening its relationship with its customers.</p>
-      </div>
-
-      <div>
-        <h3 class="heading3color-Tap">Converging our Findings</h3>
-          <p class="paragraph">For this 12 week long interaction design project, we were tasked to design anything for an existing social group of our choice as the client. We would identify pain and pleasure points within the B2C environment and pinpoint opportunities to shape a design that meets those needs while bringing value to both the company's brand and strengthening its relationship with its customers.</p>
+        <h3 class="heading3color-Tap">Synthesizing our Research & Discovering Patterns</h3>
+          <p class="paragraph">
+            
+            <img class="centerimg grid-col-m-12of12 grid-col-12of12" src="img/Tap-converge.png" alt="Converging our findings">
+          </p>
       <div>
 
     </div> 
@@ -199,9 +212,7 @@
 
 
 
-
-
-
+    </div>
 
   </div> 
 
@@ -233,6 +244,11 @@
     <script src="js/respond.min.js"></script>
     <script src="js/respond.js"></script>
 
+    <!--video scripts-->
+    <script src="js/modernizr-html5video.js"></script>
+    <script src="//api.html5media.info/1.1.8/html5media.min.js"></script> <!--makes HTML5 video and audio tags work in all major browsers including iOS safari https://html5media.info/-->
+
+    <!--main navigation srcipts-->
     <script src="js/headroom.min.js"></script>
     <script src="js/headroom.js"></script>
     <script>
@@ -254,17 +270,6 @@
 
       }());
     </script>
-
-    <!--
-    <script src="js/headroom.min.js">
-      // grab an element
-      var header = document.querySelector("header");
-      // construct an instance of Headroom, passing the element
-      var headroom  = new Headroom(header);
-      // initialise
-      headroom.init(); 
-    </script>
-    -->
 
   </body>
 
