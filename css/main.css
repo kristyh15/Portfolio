@@ -1,24 +1,29 @@
 
-/*Calibre Regular and Semi-Bold*/
+/*Calibre Regular*/
 @font-face {
-  font-family: 'Calibre';
-
-  font-weight: 600;
-  src: url('fonts/Calibre-Semibold.eot');
-  src: 
-    url('fonts/Calibre-Semibold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Calibre-Semibold.woff2') format('woff2'),
-    url('fonts/Calibre-Semibold.woff') format('woff'),
-    url('fonts/Calibre-Semibold.ttf') format('truetype');
+  font-family: 'Calibre-Regular';
 
   font-weight: normal;
   font-style: normal;
   src: url('fonts/Calibre-Regular.eot');
-  src: 
-    url('fonts/Calibre-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Calibre-Regular.woff2') format('woff2'),
-    url('fonts/Calibre-Regular.woff') format('woff'),
-    url('fonts/Calibre-Regular.ttf') format('truetype');
+  src: url('fonts/Calibre-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Calibre-Regular.woff2') format('woff2'),
+       url('fonts/Calibre-Regular.woff') format('woff'),
+       url('fonts/Calibre-Regular.ttf') format('truetype');
+}
+
+/*Calibre Regular Italic*/
+@font-face {
+  font-family: 'Calibre-RegularItalic';
+
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/hinted-CalibreRegularItalic.eot');
+  src: url('fonts/hinted-CalibreRegularItalic.eot?#iefix') format('embedded-opentype'),
+       url('fonts/hinted-CalibreRegularItalic.woff2') format('woff2'),
+       url('fonts/hinted-CalibreRegularItalic.woff') format('woff'),
+       url('fonts/hinted-CalibreRegularItalic.ttf') format('truetype'),
+       url('fonts/hinted-CalibreRegularItalic.svg#CalibreRegularItalic') format('svg');
 }
 
 /*Sofia Pro Semi-Bold*/
@@ -27,10 +32,10 @@
 
   src: url('fonts/hinted-SofiaProSemiBold.eot');
   src: url('fonts/hinted-SofiaProSemiBold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/hinted-SofiaProSemiBold.woff2') format('woff2'),
-    url('fonts/hinted-SofiaProSemiBold.woff') format('woff'),
-    url('fonts/hinted-SofiaProSemiBold.ttf') format('truetype'),
-    url('fonts/hinted-SofiaProSemiBold.svg#SofiaProSemiBold') format('svg');
+       url('fonts/hinted-SofiaProSemiBold.woff2') format('woff2'),
+       url('fonts/hinted-SofiaProSemiBold.woff') format('woff'),
+       url('fonts/hinted-SofiaProSemiBold.ttf') format('truetype'),
+       url('fonts/hinted-SofiaProSemiBold.svg#SofiaProSemiBold') format('svg');
 
   font-weight: normal;
   font-style: normal;
@@ -42,10 +47,10 @@
 
   src: url('fonts/hinted-SofiaProBold.eot');
   src: url('fonts/hinted-SofiaProBold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/hinted-SofiaProBold.woff2') format('woff2'),
-    url('fonts/hinted-SofiaProBold.woff') format('woff'),
-    url('fonts/hinted-SofiaProBold.ttf') format('truetype'),
-    url('fonts/hinted-SofiaProBold.svg#SofiaProBold') format('svg');
+       url('fonts/hinted-SofiaProBold.woff2') format('woff2'),
+       url('fonts/hinted-SofiaProBold.woff') format('woff'),
+       url('fonts/hinted-SofiaProBold.ttf') format('truetype'),
+       url('fonts/hinted-SofiaProBold.svg#SofiaProBold') format('svg');
 
   font-weight: normal;
   font-style: normal;
@@ -59,22 +64,15 @@
   font-style: normal;
   src: url('fonts/hinted-Inconsolata-Regular.eot');
   src: url('fonts/hinted-Inconsolata-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/hinted-Inconsolata-Regular.woff2') format('woff2'),
-    url('fonts/hinted-Inconsolata-Regular.woff') format('woff'),
-    url('fonts/hinted-Inconsolata-Regular.ttf') format('truetype'),
-    url('fonts/hinted-Inconsolata-Regular.svg#Inconsolata-Regular') format('svg');
+       url('fonts/hinted-Inconsolata-Regular.woff2') format('woff2'),
+       url('fonts/hinted-Inconsolata-Regular.woff') format('woff'),
+       url('fonts/hinted-Inconsolata-Regular.ttf') format('truetype'),
+       url('fonts/hinted-Inconsolata-Regular.svg#Inconsolata-Regular') format('svg');
 }
-
-
-/*
-::-webkit-scrollbar {
- display: none;
-}
-*/
 
 
 body {
-  font-family: 'SofiaPro-SemiBold', 'SofiaPro-Bold', 'Calibre', 'Inconsolata', sans-serif; 
+  font-family: 'SofiaPro-SemiBold', 'SofiaPro-Bold', 'Calibre-Regular', 'Calibre-RegularItalic', 'Inconsolata', sans-serif; 
   background-color: #f6f5f2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -162,6 +160,7 @@ FOOTER
   margin: auto;
 }
 
+
 /*******************************************
 
 VIDEO
@@ -171,14 +170,16 @@ VIDEO
 div video {
   display: inline-block;
   position: relative;
+  height: auto;
   width: 100%;
-  height: 100%;
   top:0;
   bottom:0;
   left:0;
   right:0;
   z-index: -1;
-  -webkit-filter: brightness(53%);
+  vertical-align: middle;
+  -webkit-filter: brightness(53%); /*Chrome, Safari, Opera*/
+  filter: brightness(53%); /*Firefox*/
 }
 
 .vidcontainer {
@@ -189,43 +190,9 @@ div video {
   z-index: 8;
 }
 
-/*.vidcontainer:nth-child(1) { determines which child overlaps, in this case it's the first one
-  position: relative;
-}*/
-
-video::-webkit-media-controls-start-playback-button { /*hides native iOS play button*/
+video::-webkit-media-controls-start-playback-button { /*hides native play buttons including iOS*/
   display: none;
 }
-
-/*.vidprojecttitle {
-  position: absolute;
-  font-family: 'SofiaPro-SemiBold';
-  font-weight: normal;
-  font-size: 6.5rem;
-  text-align: center;
-  letter-spacing: 0.07rem;
-  color: #f6f5f2;
-  transform-origin: center;
-  top: 26.5%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.vidprojecttype {
-  position: absolute;
-  font-family: 'SofiaPro-SemiBold';
-  font-weight: normal;
-  font-size:1.65rem;
-  text-align: center;
-  letter-spacing: 0.07rem;
-  color: #f6f5f2;
-  transform-origin: center;
-  top: 48.5%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}*/
 
 .watchvideo {
   position: absolute;
@@ -253,12 +220,6 @@ video::-webkit-media-controls-start-playback-button { /*hides native iOS play bu
 
 .vidcontainer {
   position: relative;
-}
-
-video {
-  height: auto;
-  vertical-align: middle;
-  width: 100%;
 }
 
 .vidprojecttitle {
@@ -322,6 +283,7 @@ LISTS
 }
 
 dl.paragraph {
+  /*position: relative;*/
   margin-top: -0.75rem;
 }
 
@@ -330,6 +292,18 @@ dd {
   list-style-type: disc;
   font-size:1.05rem;
   max-width: 75%;
+  line-height: 1.9rem;
+}
+
+dd.whatwhy {
+  display: list-item;
+  list-style-type: disc;  
+  font-family: 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 140%;
+  text-align: left;
+  color: #202021;
 }
 
 
@@ -340,7 +314,7 @@ HOME PAGE SPECIFIC STYLING
 *******************************************/
 
 p.intro {
-  font-family: 'SofiaPro-Bold';
+  font-family: 'SofiaPro-Bold', sans-serif;
   font-size: 2.65rem;
   font-weight: normal;
   text-align: left;
@@ -356,7 +330,7 @@ h1 {
 }
 
 .project-name {
-  font-family: 'SofiaPro-Bold';
+  font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
   text-align: center;
   letter-spacing: 0rem;
@@ -380,7 +354,7 @@ h1 {
 }
 
 p.project-description {
-  font-family: 'SofiaPro-Bold';
+  font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
   font-size: 1.188rem;
   line-height: 140%;
@@ -407,7 +381,7 @@ p.descriptioncolor-Shangrila {
 p.project-type {
   display: inline;
   clear: both;
-  font-family: 'SofiaPro-SemiBold';
+  font-family: 'SofiaPro-SemiBold', sans-serif;
   font-weight: normal;
   font-size: 1rem;
   text-align: left;
@@ -468,7 +442,7 @@ p.typecolor-Shangrila {
 
 .button {
   display: inline-block;
-  font-family: 'SofiaPro-SemiBold';
+  font-family: 'SofiaPro-SemiBold', sans-serif;
   font-weight: normal;
   font-size: 1rem;
   text-align: center;
@@ -683,13 +657,13 @@ PROJECT PAGES SPECIFIC STYLING
 
 h2 { /*for Process and Result*/
   display: block;
-  font-family: 'SofiaPro-SemiBold';
+  font-family: 'SofiaPro-SemiBold', sans-serif;
   font-weight: normal;
   font-size: 1.5rem;
   text-align: center;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-  margin: 4.5rem auto 3.5rem auto;
+  margin: 9rem auto 3.5rem auto;
   clear: both;
 }
 
@@ -710,19 +684,32 @@ h2.heading2color-Shangrila {
   color: #d32b2b;
 }
 
-.subheadings { /*for section titles*/
-  font-family: 'SofiaPro-Bold';
+.subheadings {
+  display: block;
+  font-family: 'Calibre-RegularItalic', 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 140%;
+  text-align: left;
+  max-width: 50%;
+  color: #666666;
+  margin: 0rem auto 1.25rem auto;
+}
+
+span.titles { /*for section titles*/
+  font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
   font-size: 0.88rem;
   color: #202021;
   text-align: left;
   letter-spacing: 0.04rem;
-  margin: 3rem 0rem 1rem 0rem;
+  margin: 7rem 0rem 1rem 0rem;
 }
+
 
 .roleteam {
   float: right;
-  font-family: 'Calibre';
+  font-family: 'Calibre', sans-serif;
   font-weight: normal;
   font-size: 1rem;
   text-align: left;
@@ -731,9 +718,9 @@ h2.heading2color-Shangrila {
   margin: 0rem auto 1.1rem auto;
 }
 
-h3 { /*for section titles*/
+h3 {
   display: block;
-  font-family: 'SofiaPro-Bold';
+  font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
   font-size: 0.8rem;
   text-align: center;
@@ -741,6 +728,10 @@ h3 { /*for section titles*/
   text-transform: uppercase;
   margin: 2.5rem auto 0.8rem auto;
   clear: right;
+}
+
+h3.results {
+  margin-top: 3.75rem;
 }
 
 h3.heading3color-Gusto {
@@ -761,7 +752,7 @@ h3.heading3color-Shangrila {
 
 .paragraph {
   display: block;
-  font-family: 'Calibre';
+  font-family: 'Calibre-Regular', sans-serif;
   font-weight: normal;
   font-size: 1.25rem;
   line-height: 140%;
@@ -770,6 +761,27 @@ h3.heading3color-Shangrila {
   color: #202021;
   margin: 0rem auto 1.25rem auto;
 }
+
+.imgTap-knowusers {
+  -ms-transform-origin: top; /*IE 9*/
+  -webkit-transform-origin: top; /*Chrome, Safari, Opera*/
+  -moz-transform-origin: top; /*Firefox*/
+  -ms-transform: scale(0.65); /* IE 9 */
+  -webkit-transform: scale(0.65); /*Chrome, Safari, Opera*/
+  -moz-transform: scale(0.65);/*Firefox*/
+  margin-top: 0.85rem;
+  margin-bottom: -6rem;
+}
+
+.imgTap-wireframes {
+  display: inline;
+  float: left;
+  margin-bottom: 1rem;
+  margin-right: 0.75rem;
+}
+
+
+
 
 
 /*******************************************
@@ -1282,7 +1294,6 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 **************************************************/
 
 @media only screen and (max-width: 320px) { 
-
   div a.watchvideo {
     display: table-cell;
     margin: -3.3rem auto 0rem auto;
@@ -1296,30 +1307,29 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     font-size: 2.25rem;
   }
 
-  div.vidtitle h1 {
+  div.vidtitle-shangrila h1 {
     margin-top: 2.1rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
   }
 
   div.vidprojecttype p {
     font-size: 0.95rem;
+    margin-bottom: 5.5rem;
   }
-
-  div.vidtype-shangrla p {
-    margin-bottom: 6.5rem; 
-  }
-
 }
 
-
 @media only screen and (min-width: 321px) and (max-width: 479px) { 
-
   div a.watchvideo {
     display: block;
     margin: -3.25rem auto 0rem auto;
     text-align: center;
     font-size: 1rem;
     width: 100%;
-    clear:both;
+    clear: both;
   }
 
   div.vidprojecttitle h1 {
@@ -1330,19 +1340,18 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 2.5rem;  
   }
 
+  div.vidtitle-tap h1 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+  }
+
   div.vidprojecttype p {
     font-size: 1.1rem;
-  }
-
-  div.vidtype-shangrila p {
     margin-bottom: 4rem; 
   }
-
 }
 
-
 @media only screen and (min-width: 480px) and (max-width: 639px) { 
-
   div a.watchvideo {
     display: block;
     margin: -3.25rem auto 0rem auto;
@@ -1360,19 +1369,19 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 2.5rem;  
   }
 
+  div.vidtitle-tap h1 {
+    font-size: 3rem;
+    margin-top: 4rem;
+  }
+
   div.vidprojecttype p {
     font-size: 1.25rem;
-  }
-
-  div.vidtype-shangrila p {
     margin-bottom: 4rem; 
   }
-
 }
 
 
 @media only screen and (min-width: 640px) and (max-width: 700px) {
-
   div a.watchvideo {
 /*    top: 30%;
     left: 37.5%;
@@ -1393,47 +1402,53 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 2.75rem;  
   }
 
+  div.vidtitle-tap h1 {
+    font-size: 3rem;
+    margin-top: 4.5rem;
+  }
+
   div.vidprojecttype p {
     font-size: 1.25rem;
-  }
-
-  div.vidtype-shangrila p {
     margin-bottom: 2.75rem; 
   }
-
 }
 
 
 
 @media only screen and (min-width: 701px) and (max-width: 776px) {
-
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
   }
 
-  div.vidtitle h1 {
+  div.vidtitle-shangrila h1 {
     margin-top: 1.8rem;  
   }
 
+  div.vidtitle-tap h1 {
+    font-size: 3.5rem;
+    margin-top: 4.5rem;
+  }
+
+
   div.vidprojecttype p {
     font-size: 1.4rem;
+    margin-bottom: 2.75rem; 
   }
-
-  div.vidtype-shangrila p {
-    margin-bottom: 3rem; 
-  }
-
 }
 
 
 @media only screen and (min-width: 777px) and (max-width: 874px) {
-
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
   }
 
-  div.vidtitle h1 {
+  div.vidtitle-shangrila h1 {
     margin-top: 1.8rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 4rem;
+    margin-top: 4.5rem;
   }
 
   div.vidprojecttype p {
@@ -1443,13 +1458,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
   div.vidtype-shangrila p {
     margin-bottom: 3rem; 
   }
-
 }
 
 
 
 @media only screen and (min-width: 875px) and (max-width: 991px) {
-
   div.vidprojecttitle h1 {
     font-size: 3.5rem;
   }
@@ -1458,11 +1471,13 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 2rem;  
   }
 
-  div.vidprojecttype p {
-    font-size: 1.45rem;
+  div.vidtitle-tap h1 {
+    font-size: 4.5rem;
+    margin-top: 4.5rem;
   }
 
-  div.vidtype-shangrla p {
+  div.vidprojecttype p {
+    font-size: 1.45rem;
     margin-bottom: 1.5rem; 
   }
 
@@ -1470,7 +1485,6 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 
 
 @media only screen and (min-width: 992px) and (max-width: 1274px){
-
   div.vidprojecttitle h1 {
     font-size: 4.5rem;
   }
@@ -1479,11 +1493,13 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 1rem;  
   }
 
-  div.vidprojecttype p {
-    font-size: 1.55rem;
+  div.vidtitle-tap h1 {
+    font-size: 5rem;
+    margin-top: 4.5rem;
   }
 
-  div.vidtype-shangrila p {
+  div.vidprojecttype p {
+    font-size: 1.55rem;
     margin-bottom: 1rem; 
   }
 
@@ -1492,7 +1508,6 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 
 
 @media only screen and (min-width: 1275px) {
-
   div.vidprojecttitle h1 {
     font-size: 5.5rem;
   }
@@ -1501,14 +1516,15 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 0rem;
   }
 
+  div.vidtitle-tap h1 {
+    font-size: 6rem;
+    margin-top: 4.5rem;
+  }
+
   div.vidprojecttype p {
     font-size: 1.65rem;
-  }
-
-  div.vidtype-shangrila p {
     margin-bottom: 0rem;
   }
-
 }
 
 
@@ -1548,31 +1564,13 @@ JAVASCRIPT
 
 *******************************************/
 
-/*HEADROOM JS CLASS STUFF*/
-
-/*
-.headroom {
-    will-change: transform;
-    transition: transform 200ms linear;
-}
-
-.headroom--pinned {
-  transform: translateY(0%);
-}
-
-.headroom--unpinned {
-  transform: translateY(-100%);
-}
-*/
-
-/* WITH THE TOP SCRIPT STUFF*/
+/*headroom.js script*/
 
 .headroom {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  /*transition: all .2s ease-in-out;*/
     transition: transform .32s ease-in-out;
     transition-property: transform;
     transition-duration: 0.32s;
@@ -1582,7 +1580,6 @@ JAVASCRIPT
 }
 
 .headroom--unpinned {
-  /*top: -100px;*/
   transform:translateY(-100%);
 }
 
@@ -1597,29 +1594,6 @@ JAVASCRIPT
   left:0;
   top:0;
 }
-
-/*
-.headroom--unpinned {
-  transform:translateY(-100px);
-}
-
-.headroom {
-  transition:transform .25s ease-in-out;
-    transition-property: transform;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in-out;
-    transition-delay: initial;
-  will-change: transform;
-}
-
-.header--fixed {
-  position: fixed;
-  z-index: 10;
-  right:0;
-  left:0;
-  top:0;
-}*/
-
 
 
 
