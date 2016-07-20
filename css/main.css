@@ -26,6 +26,21 @@
        url('fonts/hinted-CalibreRegularItalic.svg#CalibreRegularItalic') format('svg');
 }
 
+/*Calibre Light Italic*/
+@font-face {
+  font-family: 'Calibre-LightItalic';
+
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/hinted-CalibreLightItalic.eot');
+  src: url('fonts/hinted-CalibreLightItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/hinted-CalibreLightItalic.woff2') format('woff2'),
+    url('fonts/hinted-CalibreLightItalic.woff') format('woff'),
+    url('fonts/hinted-CalibreLightItalic.ttf') format('truetype'),
+    url('fonts/hinted-CalibreLightItalic.svg#CalibreLightItalic') format('svg');
+}
+
+
 /*Sofia Pro Semi-Bold*/
 @font-face {
   font-family: 'SofiaPro-SemiBold';
@@ -678,7 +693,7 @@ h2.heading2color-Shangrila {
   color: #d32b2b;
 }
 
-.subheadings {
+/*.subheadings {
   display: block;
   font-family: 'Calibre-RegularItalic', 'Calibre-Regular', sans-serif;
   font-weight: normal;
@@ -688,7 +703,21 @@ h2.heading2color-Shangrila {
   max-width: 51%;
   color: #666666;
   margin: 0rem auto 1.25rem auto;
+}*/
+
+.primer {
+  display: block;
+  font-family: 'Calibre-LightItalic', sans-serif;
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 140%;
+  text-align: left;
+  max-width: 60%;
+  color: #666666;
+  margin: 0rem auto 1.25rem auto;
+  padding-left: 2rem;
 }
+
 
 span.titles { /*for section titles*/
   font-family: 'SofiaPro-Bold', sans-serif;
@@ -720,12 +749,13 @@ h3 {
   letter-spacing: 0.05rem;
   line-height: 1.2rem;
   text-transform: uppercase;
-  margin: 2.5rem auto 0.8rem auto;
+  margin: 3rem auto 0.8rem auto;
   clear: right;
 }
 
 h3.results {
-  margin-top: 3.75rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
 }
 
 h3.heading3color-Gusto {
