@@ -271,22 +271,6 @@ LISTS
 
 *******************************************/
 
-/*unordered list*/
-.ulist {
-  color: #202021;
-  margin: 0;
-}
-
-/*ordered list*/
-.olist {
-  color: #202021;
-}
-
-dl.paragraph {
-  /*position: relative;*/
-  margin-top: -0.75rem;
-}
-
 dd {
   display: list-item;
   list-style-type: disc;
@@ -302,8 +286,17 @@ dd.whatwhy {
   font-weight: normal;
   font-size: 1.25rem;
   line-height: 140%;
+  max-width: 85%;
   text-align: left;
   color: #202021;
+}
+
+dd.numlist {
+  display: list-item;
+  list-style-type: decimal;  
+  font-size: 1.05rem;
+  max-width: 100%;
+  line-height: 1.9rem;
 }
 
 
@@ -648,22 +641,23 @@ PROJECT PAGES SPECIFIC STYLING
   font-size: 1.25rem;
   line-height: 140%;
   text-align: left;
-  padding: 4.5% 24.95% 4% 24.95%;
+  padding: 4.5% 24% 4% 24%;
 }
 
 .pitchtextcolor-Tap {
   color: #0e5098;
 }
 
-h2 { /*for Process and Result*/
+h2 {
   display: block;
   font-family: 'SofiaPro-SemiBold', sans-serif;
   font-weight: normal;
   font-size: 1.5rem;
   text-align: center;
   letter-spacing: 0.25rem;
+  line-height: 2rem;
   text-transform: uppercase;
-  margin: 9rem auto 3.5rem auto;
+  margin: 17rem auto 3.5rem auto;
   clear: both;
 }
 
@@ -691,7 +685,7 @@ h2.heading2color-Shangrila {
   font-size: 1.3rem;
   line-height: 140%;
   text-align: left;
-  max-width: 50%;
+  max-width: 51%;
   color: #666666;
   margin: 0rem auto 1.25rem auto;
 }
@@ -705,7 +699,6 @@ span.titles { /*for section titles*/
   letter-spacing: 0.04rem;
   margin: 7rem 0rem 1rem 0rem;
 }
-
 
 .roleteam {
   float: right;
@@ -725,6 +718,7 @@ h3 {
   font-size: 0.8rem;
   text-align: center;
   letter-spacing: 0.05rem;
+  line-height: 1.2rem;
   text-transform: uppercase;
   margin: 2.5rem auto 0.8rem auto;
   clear: right;
@@ -757,27 +751,48 @@ h3.heading3color-Shangrila {
   font-size: 1.25rem;
   line-height: 140%;
   text-align: left;
-  max-width: 50%;
+  max-width: 51%;
   color: #202021;
   margin: 0rem auto 1.25rem auto;
 }
 
-.imgTap-knowusers {
-  -ms-transform-origin: top; /*IE 9*/
-  -webkit-transform-origin: top; /*Chrome, Safari, Opera*/
-  -moz-transform-origin: top; /*Firefox*/
-  -ms-transform: scale(0.65); /* IE 9 */
-  -webkit-transform: scale(0.65); /*Chrome, Safari, Opera*/
-  -moz-transform: scale(0.65);/*Firefox*/
-  margin-top: 0.85rem;
-  margin-bottom: -6rem;
-}
-
 .imgTap-wireframes {
   display: inline;
+  height: auto;
   float: left;
   margin-bottom: 1rem;
   margin-right: 0.75rem;
+}
+
+div img.imgTap {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: 0rem auto 1rem auto;
+  clear: both;
+}
+
+div img.imgTap-knowusers {
+  display: block;
+  width: 35%;
+  height: auto;
+  margin: 0rem auto 1rem auto;
+}
+
+div.imgTapcontainer {
+  display: block;
+  clear: both;
+  max-width: 75%;
+  color: #666666;
+  margin: 0rem auto;
+}
+
+div img.imgTapresults {
+  display: block;
+  width: 35%;
+  height: auto;
+  margin: 0rem auto 1rem auto;
+  clear: both;
 }
 
 
@@ -1414,7 +1429,6 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 
-
 @media only screen and (min-width: 701px) and (max-width: 776px) {
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
@@ -1506,7 +1520,6 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 
-
 @media only screen and (min-width: 1275px) {
   div.vidprojecttitle h1 {
     font-size: 5.5rem;
@@ -1525,6 +1538,59 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     font-size: 1.65rem;
     margin-bottom: 0rem;
   }
+}
+
+
+
+/**************************************************
+
+TAP PROJECT MEDIA QUERIES AND BREAKPOINTS
+
+**************************************************/
+
+@media only screen and (max-width: 320px) { 
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 479px) { 
+  div img.imgTapresults {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) { 
+
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 700px) {
+
+}
+
+
+@media only screen and (min-width: 701px) and (max-width: 776px) {
+
+}
+
+
+@media only screen and (min-width: 777px) and (max-width: 874px) {
+
+}
+
+
+
+@media only screen and (min-width: 875px) and (max-width: 991px) {
+
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1274px){
+
+}
+
+
+@media only screen and (min-width: 1275px) {
+
 }
 
 
