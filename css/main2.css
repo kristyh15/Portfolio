@@ -208,8 +208,7 @@ video::-webkit-media-controls-start-playback-button { /*hides native play button
   display: none;
 }
 
-/*.watchvideo {
-  position: absolute;
+.watchvid {
   font-family: 'SofiaPro-SemiBold';
   font-weight: normal;
   font-size: 1rem;
@@ -221,30 +220,43 @@ video::-webkit-media-controls-start-playback-button { /*hides native play button
   border-width: 0.125rem;
   border-color: #f6f5f2;
   background-color: transparent;
-}*/
+}
 
-.vidcontainer {
-  position: relative;
+.watchvid:focus, .watchvid:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
 }
 
 .watchvideo {
-  display: block;
   position: absolute;
-  bottom: 0rem; 
-  align-items: center;
-  justify-content: center;
-  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
-
   font-family: 'SofiaPro-SemiBold';
   font-weight: normal;
   font-size: 1rem;
+  color: #f6f5f2;
   text-align: center;
   text-decoration: none;
-  color: #f6f5f2;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
   border-style: solid;
   border-width: 0.125rem;
   border-color: #f6f5f2;
   background-color: transparent;
+}
+
+.watchvideo:focus, .watchvideo:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.vidcontainer {
+  position: relative;
 }
 
 .vidprojecttitle {
@@ -290,29 +302,6 @@ div.vidprojecttypebutton {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.watchvid {
-  font-family: 'SofiaPro-SemiBold';
-  font-weight: normal;
-  font-size: 1rem;
-  color: #f6f5f2;
-  text-align: center;
-  text-decoration: none;
-  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
-  border-style: solid;
-  border-width: 0.125rem;
-  border-color: #f6f5f2;
-  background-color: transparent;
-}
-
-.watchvid:focus, .watchvid:hover {
-  color: #202021;
-  border-color: #f6f5f2;
-  background-color: #f6f5f2;
-  -webkit-transition: background-color 0.3s ease-out;
-  transition: background-color 0.3s ease-out;
-  cursor: pointer;
 }
 
 div.vidprojecttype p {
@@ -1411,6 +1400,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 **************************************************/
 
 @media only screen and (max-width: 320px) { 
+
+  div a.watchvid {
+    display: none;
+  }
+
   div a.watchvideo {
     display: table-cell;
     margin: -3.3rem auto 0rem auto;
@@ -1441,6 +1435,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 321px) and (max-width: 479px) { 
+  
+  div a.watchvid {
+    display: none;
+  }
+
   div a.watchvideo {
     display: block;
     margin: -3.25rem auto 0rem auto;
@@ -1472,6 +1471,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px) { 
+
+  div a.watchvid {
+    display: none;
+  }
+
   div a.watchvideo {
     display: block;
     margin: -3.25rem auto 0rem auto;
@@ -1502,6 +1506,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 640px) and (max-width: 700px) {
+
+  div a.watchvideo {
+    display: none;
+  }
+
 /*  div a.watchvideo {
     top: 30%;
     left: 37.5%;
@@ -1593,6 +1602,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 701px) and (max-width: 776px) {
+
+  div a.watchvideo {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
   }
@@ -1615,6 +1629,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 777px) and (max-width: 874px) {
+
+  div a.watchvideo {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
   }
@@ -1641,12 +1660,7 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 @media only screen and (min-width: 875px) and (max-width: 991px) {
 
   div a.watchvideo {
-    display: block;
-    position: absolute;
-    margin: -13.25rem auto 10rem auto;
-    text-align: center;
-    font-size: 1rem;
-    width: 10rem;
+    display: none;
   }
 
   div.vidprojecttitle h1 {
@@ -1671,6 +1685,10 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 
 @media only screen and (min-width: 992px) and (max-width: 1274px){
 
+  div a.watchvideo {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 4.5rem;
   }
@@ -1692,6 +1710,11 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 1275px) {
+
+  div a.watchvideo {
+    display: none;
+  }
+  
   div.vidprojecttitle h1 {
     font-size: 5.5rem;
   }
