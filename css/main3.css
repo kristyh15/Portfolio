@@ -1,0 +1,1893 @@
+
+/*Calibre Regular*/
+@font-face {
+  font-family: 'Calibre-Regular';
+
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/Calibre-Regular.eot');
+  src: url('fonts/Calibre-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Calibre-Regular.woff2') format('woff2'),
+       url('fonts/Calibre-Regular.woff') format('woff'),
+       url('fonts/Calibre-Regular.ttf') format('truetype');
+}
+
+/*Calibre Regular Italic*/
+@font-face {
+  font-family: 'Calibre-RegularItalic';
+
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/hinted-CalibreRegularItalic.eot');
+  src: url('fonts/hinted-CalibreRegularItalic.eot?#iefix') format('embedded-opentype'),
+       url('fonts/hinted-CalibreRegularItalic.woff2') format('woff2'),
+       url('fonts/hinted-CalibreRegularItalic.woff') format('woff'),
+       url('fonts/hinted-CalibreRegularItalic.ttf') format('truetype'),
+       url('fonts/hinted-CalibreRegularItalic.svg#CalibreRegularItalic') format('svg');
+}
+
+/*Calibre Light Italic*/
+@font-face {
+  font-family: 'Calibre-LightItalic';
+
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/hinted-CalibreLightItalic.eot');
+  src: url('fonts/hinted-CalibreLightItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/hinted-CalibreLightItalic.woff2') format('woff2'),
+    url('fonts/hinted-CalibreLightItalic.woff') format('woff'),
+    url('fonts/hinted-CalibreLightItalic.ttf') format('truetype'),
+    url('fonts/hinted-CalibreLightItalic.svg#CalibreLightItalic') format('svg');
+}
+
+/*Sofia Pro Semi-Bold*/
+@font-face {
+  font-family: 'SofiaPro-SemiBold';
+
+  src: url('fonts/hinted-SofiaProSemiBold.eot');
+  src: url('fonts/hinted-SofiaProSemiBold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/hinted-SofiaProSemiBold.woff2') format('woff2'),
+       url('fonts/hinted-SofiaProSemiBold.woff') format('woff'),
+       url('fonts/hinted-SofiaProSemiBold.ttf') format('truetype'),
+       url('fonts/hinted-SofiaProSemiBold.svg#SofiaProSemiBold') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Sofia Pro Bold*/
+@font-face {
+  font-family: 'SofiaPro-Bold';
+
+  src: url('fonts/hinted-SofiaProBold.eot');
+  src: url('fonts/hinted-SofiaProBold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/hinted-SofiaProBold.woff2') format('woff2'),
+       url('fonts/hinted-SofiaProBold.woff') format('woff'),
+       url('fonts/hinted-SofiaProBold.ttf') format('truetype'),
+       url('fonts/hinted-SofiaProBold.svg#SofiaProBold') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Inconsolata*/
+@font-face {
+  font-family: 'Inconsolata';
+
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/hinted-Inconsolata-Regular.eot');
+  src: url('fonts/hinted-Inconsolata-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/hinted-Inconsolata-Regular.woff2') format('woff2'),
+       url('fonts/hinted-Inconsolata-Regular.woff') format('woff'),
+       url('fonts/hinted-Inconsolata-Regular.ttf') format('truetype'),
+       url('fonts/hinted-Inconsolata-Regular.svg#Inconsolata-Regular') format('svg');
+}
+
+
+body {
+  font-family: 'SofiaPro-SemiBold', 'SofiaPro-Bold', 'Calibre-Regular', 'Calibre-RegularItalic', 'Inconsolata', sans-serif; 
+  background-color: #f6f5f2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.floatright {
+  float: right;
+}
+
+.floatleft {
+  float: left;
+}
+
+/*Styling for grid*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+  text-decoration: none;
+}
+
+
+
+/*******************************************
+
+MAIN NAVIGATION
+
+*******************************************/
+
+nav {
+  position: relative;
+  font-family:'Inconsolata';
+  font-weight: 400;
+  font-size:1rem;
+  font-size-adjust: 100%;
+  text-align: center;
+  letter-spacing: 0.08rem;
+  margin-left: -2rem;
+  width: 100%;
+  background: transparent;
+}
+
+@media (min-width: 40em) {
+  nav{
+    top: 0em;
+    left: 0em;
+  }
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+.button-nav {
+  display: inline-block;
+  padding-top: 1.6rem;
+  color: #cdbe8c;
+  background: transparent;
+  text-decoration: none;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.button-nav:hover, .button-nav:focus {
+  opacity: 0.5;
+}
+
+
+/*******************************************
+
+FOOTER
+
+*******************************************/
+
+.footer {
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #cdbe8c;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+}
+
+
+/*******************************************
+
+LISTS
+
+*******************************************/
+
+dd {
+  display: list-item;
+  list-style-type: disc;
+  font-size:1.05rem;
+  max-width: 75%;
+  line-height: 1.9rem;
+}
+
+dd.whatwhy { /*for results*/
+  display: list-item;
+  list-style-type: disc;  
+  font-family: 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 140%;
+  max-width: 85%;
+  text-align: left;
+  color: #202021;
+}
+
+dd.numlist {
+  display: list-item;
+  list-style-type: decimal;  
+  font-size: 1.05rem;
+  max-width: 100%;
+  line-height: 1.9rem;
+}
+
+
+/*******************************************
+
+HOME PAGE SPECIFIC STYLING 
+
+*******************************************/
+
+p.intro {
+  font-family: 'SofiaPro-Bold', sans-serif;
+  font-size: 2.65rem;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: 0.01rem;
+  line-height: 150%;
+  color: #383838;
+  max-width: 55%;
+}
+
+h1 {
+  font-size:2.75rem;
+  letter-spacing: 0.07rem;
+}
+
+.project-name {
+  font-family: 'SofiaPro-Bold', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0rem;
+  margin: 3.3rem auto;
+}
+
+.namecolor-Tap {
+  color: #0e5098;
+}
+
+.namecolor-Kiehls {
+  color: #333333;
+}
+
+.namecolor-Gusto {
+  color: #125a2f;
+}
+
+.namecolor-Shangrila {
+  color: #d32b2b;
+}
+
+p.project-description {
+  font-family: 'SofiaPro-Bold', sans-serif;
+  font-weight: normal;
+  font-size: 1.188rem;
+  line-height: 140%;
+  text-align: left;
+  clear: both;
+}
+
+p.descriptioncolor-Tap {
+  color: #0e5098;
+}
+
+p.descriptioncolor-Kiehls {
+  color: #333333;
+}
+
+p.descriptioncolor-Gusto {
+  color: #125a2f;
+}
+
+p.descriptioncolor-Shangrila {
+  color: #d32b2b;
+}
+
+p.project-type {
+  display: inline;
+  clear: both;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 5rem;
+}
+
+p.typecolor-Tap {
+  color: #0e5098;
+}
+
+p.typecolor-Kiehls {
+  color: #333333;
+}
+
+p.typecolor-Gusto {
+  color: #125a2f;
+}
+
+p.typecolor-Shangrila {
+  color: #d32b2b;
+}
+
+.line {
+  height:5.5rem;
+  width: 2px; /*pixels so it doesn't change size when readjusting viewport*/
+  justify-content: center;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 9;
+}
+
+.line:nth-child(1) { /*determines which child overlaps, in this case it's the first one*/
+  position: relative;
+  top: -50px;
+}
+
+.linecolor-Tap {
+  background-color: #0e5098;
+}
+
+.linecolor-Kiehls {
+  background-color: #333333;
+}
+
+.linecolor-Gusto {
+  background-color: #125a2f;
+}
+
+.linecolor-Shangrila {
+  background-color: #d32b2b;
+}
+
+.button {
+  display: inline-block;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1.75rem 5rem;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  text-decoration: none;
+}
+
+.buttoncolor-Gusto {
+  color: #125a2f;
+  background-color: #bbd7c9;
+  border-color: #125a2f;
+}
+
+.buttoncolor-Gusto:focus, .buttoncolor-Gusto:hover {
+  color: #bbd7c9;
+  background-color: #125a2f;
+  border-color: #125a2f;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.buttoncolor-Gusto:active {
+  color: #bbd7c9;
+  background-color: #125a2f;
+  border-color: #125a2f;
+}
+
+.no-touchevents .buttoncolor-Gusto { /*used with Modernizr touch events*/
+  color: #bbd7c9;
+  background-color: #125a2f;
+  border-color: #125a2f;
+}
+.touchevents .buttoncolor-Gusto { /*used with Modernizr touch events*/
+  color: #bbd7c9;
+  background-color: #125a2f;
+  border-color: #125a2f;
+}
+
+.buttoncolor-Tap {
+  color: #0e5098;
+  background-color: #b6d6d4;
+  border-color: #0e5098;
+}
+
+.buttoncolor-Tap:focus, .buttoncolor-Tap:hover {
+  color: #b6d6d4;
+  background-color: #0e5098;
+  border-color: #0e5098;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.buttoncolor-Tap:active {
+  color: #b6d6d4;
+  background-color: #0e5098;
+  border-color: #0e5098;
+}
+
+.no-touchevents .buttoncolor-Tap { /*used with Modernizr touch events*/
+  color: #0e5098;
+  background-color: #b6d6d4;
+  border-color: #0e5098;
+}
+.touchevents .buttoncolor-Tap { /*used with Modernizr touch events*/
+  color: #b6d6d4;
+  background-color: #0e5098;
+  border-color: #0e5098;
+}
+
+.buttoncolor-Kiehls {
+  color: #333333;
+  background-color: #dfdfdb;
+  border-color: #333333;
+}
+
+.buttoncolor-Kiehls:focus, .buttoncolor-Kiehls:hover {
+  color: #dfdfdb;
+  background-color: #333333;
+  border-color: #333333;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.buttoncolor-Kiehls:active {
+  color: #dfdfdb;
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.no-touchevents .buttoncolor-Kiehls { /*used with Modernizr touch events*/
+  color: #333333;
+  background-color: #dfdfdb;
+  border-color: #333333;
+}
+.touchevents .buttoncolor-Kiehls { /*used with Modernizr touch events*/
+  color: #dfdfdb;
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.buttoncolor-Shangrila {
+  color: #d32b2b;
+  background-color: #f6d8cd;
+  border-color: #d32b2b;
+}
+
+.buttoncolor-Shangrila:focus, .buttoncolor-Shangrila:hover {
+  color: #f6d8cd;
+  background-color: #d32b2b;
+  border-color: #d32b2b;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
+}
+
+.buttoncolor-Shangrila:active {
+  color: #d32b2b;
+  background-color: #f6d8cd;
+  border-color: #d32b2b;
+}
+
+.no-touchevents .buttoncolor-Shangrila { /*used with Modernizr touch events*/
+  color: #f6d8cd;
+  background-color: #d32b2b;
+  border-color: #d32b2b;
+}
+.touchevents .buttoncolor-Shangrila { /*used with Modernizr touch events*/
+  color: #d32b2b;
+  background-color: #f6d8cd;
+  border-color: #d32b2b;
+}
+
+img.project-screen {
+  display: inline;
+  float: right;
+  clear: both;
+  position: absolute;
+  height: auto;
+  padding-right:1rem;
+  margin: -11.75rem 0rem 0rem -6rem;
+}
+
+.project-bg {
+  position: relative;
+  clear: both;
+  width: 80%;
+  padding-bottom: 14.75%;
+  margin: 0rem auto 10rem auto;
+  z-index: 8;
+}
+
+.bgcolor-Gusto {
+  background: #bbd7c9;
+}
+
+.bgcolor-Tap {
+  background: #b6d6d4;
+}
+
+.bgcolor-Kiehls {
+  background: #dfdfdb;
+}
+
+.bgcolor-Shangrila {
+  background: #f6d8cd;
+  margin-bottom: 2rem;
+}
+
+
+/*******************************************
+
+PROJECT PAGE VIDEO
+
+*******************************************/
+
+div video {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -1;
+  vertical-align: middle;
+  -webkit-filter: brightness(60%); /*Chrome, Safari, Opera*/
+}
+
+/*.dimVideo {
+  -webkit-filter: brightness(53%); 
+  filter: brightness(53%); /*Firefox*/
+/*}*/
+
+.vidcontainer {
+  position: relative;
+}
+
+video::-webkit-media-controls-start-playback-button { /*hides native play buttons including iOS*/
+  display: none;
+}
+
+.vidprojecttitle {
+  display: block;
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 4rem; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.vidprojecttitle h1 {
+  color: white;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 6rem;
+  text-align: center;
+  letter-spacing: 0.07rem;
+}
+
+.vidprojecttype {
+  display: block;
+  position: absolute;
+  top: 6rem; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.vidprojecttype p {
+  color: white;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.65rem;
+  text-align: center;
+  letter-spacing: 0.07rem;
+}
+
+div.vidprojectbutton {
+  display: block;
+  position: absolute;
+  top: 15rem; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watchvideo-desktop {
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 1rem;
+  color: #f6f5f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
+  margin-top: 1rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-color: #f6f5f2;
+  background-color: transparent;
+}
+
+.watchvideo-desktop:focus, .watchvideo-desktop:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.watchvideo-mobile {
+  position: absolute;
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 1rem;
+  color: #f6f5f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-color: #f6f5f2;
+  background-color: transparent;
+}
+
+.watchvideo-mobile:focus, .watchvideo-mobile:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.animated { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+
+
+/*******************************************
+
+PROJECT PAGES SPECIFIC STYLING 
+
+*******************************************/
+
+.pitchbg {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.pitchbgcolor-Gusto {
+  background-color: #bbd7c9;
+}
+
+.pitchbgcolor-Tap {
+  background-color: #b6d6d4;
+}
+
+.pitchbgcolor-Kiehls {
+  background-color: #dfdfdb;
+}
+
+.pitchbgcolor-Shangrila {
+  background-color: #f6d8cd;
+}
+
+.pitchtext {
+  font-family: 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 150%;
+  text-align: left;
+  max-width: 732px;
+  padding: 70px 20px;
+  margin: 0 auto;
+}
+
+.pitchtextcolor-Tap {
+  color: #0e5098;
+}
+
+.roleteam {
+  display: block;
+  font-family: 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: center;
+  max-width: 732px;
+  padding: 0px 20px 0px 20px;
+  margin: 0 auto;
+  color: #999999;
+}
+
+h2 {
+  display: block;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.25rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  margin: 19.5rem auto 3.5rem auto;
+  clear: both;
+}
+
+h2.firstheading {
+  margin-top: 12rem;
+}
+
+h2.heading2color-Gusto {
+  color: #125a2f;
+}
+
+h2.heading2color-Tap {
+  color: #0e5098;
+}
+
+h2.heading2color-Kiehls {
+  color: #333333;
+}
+
+h2.heading2color-Shangrila {
+  color: #d32b2b;
+}
+
+.primer {
+  display: block;
+  font-family: 'Calibre-LightItalic', sans-serif;
+  font-weight: normal;
+  font-size: 1.75rem;
+  line-height: 140%;
+  text-align: left;
+  max-width: 732px;
+  color: #777777;
+  margin: 0rem auto 0rem auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+span.titles { /*for grey section titles*/
+  display: block;
+  font-family: 'SofiaPro-Bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.925rem;
+  color: #999999;
+  text-align: left;
+  letter-spacing: 0.04rem;
+  margin-top: 2.75rem;
+}
+
+span.resulttitles { /*for grey result titles*/
+  display: block;
+  font-family: 'SofiaPro-Bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.925rem;
+  color: #999999;
+  text-align: left;
+  letter-spacing: 0.04rem;
+  margin-top: 0rem;
+}
+
+p span.subheadings {
+  display: block;
+  font-family: 'SofiaPro-Bold', sans-serif;
+  font-weight: normal;
+  font-size: 0.8rem;
+  text-align: left;
+  letter-spacing: 0.05rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  margin-top: 7.5rem;
+  margin-bottom: 0.25rem;
+  color: #202021;
+}
+
+p span.firstsubheading {
+  margin-top: 0rem;
+}
+
+.paragraph {
+  display: block;
+  font-family: 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 145%;
+  text-align: left;
+  max-width: 732px;
+  color: #202021;
+  margin: 0rem auto 1.25rem auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+div.imgTapcontainer {
+  display: flex;
+  align-items: flex-end;
+  max-width: 72%;
+  height: auto;
+  color: #666666;
+  margin: 0rem auto;
+}
+
+div img.imgTap-wireframes {
+  margin: 1.75rem auto;
+}
+
+div img.imgTap {
+  display: block;
+  width: 900px;
+  height: auto;
+  margin: 0rem auto 1rem auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+div img.imgTapresults {
+  display: block;
+  width: 35%;
+  height: auto;
+  margin: 0rem auto 1rem auto;
+  clear: both;
+}
+
+div img.imgTapresults {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+
+/*******************************************
+
+HOME PAGE MEDIA QUERIES AND BREAKPOINTS
+
+*******************************************/
+
+
+@media only screen and (max-width: 320px) { 
+  p.intro {
+    font-size:1.5rem;
+    letter-spacing: 0.085rem;
+    line-height: 2.25rem;
+    max-width: 85%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size:1.5rem;
+    letter-spacing: 0.085rem;
+  }
+
+  p.project-description {
+    margin: -2.3rem 0.8rem 1rem 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  div p.project-type {
+    display: block;
+    padding: 0rem;
+    margin: 0.25rem 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 0%;
+    width:90%;
+    position: relative;
+  }
+
+  div img.project-screen {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin: 0rem auto;
+    padding: 1rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    display: block;
+    margin: 16rem auto 7rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    clear:both;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 479px) { 
+  p.intro {
+    font-size:1.75rem;
+    letter-spacing: 0.085rem;
+    line-height: 2.25rem;
+    max-width: 85%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size:1.75rem;
+    letter-spacing: 0.09rem;
+    line-height: 1.85rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  p.project-description {
+    margin: -2.3rem 0.8rem 1.5rem 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  div p.project-type {
+    display: block;
+    padding: 0rem;
+    margin: 1rem 0.8rem 1rem 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 0rem;
+    width: 90%;
+    position: relative;
+  }
+
+  div img.project-screen {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0rem auto;
+    position: relative;
+    padding: 1rem;
+    clear: both;
+  }
+
+  div a.button {
+    display: block;
+    margin: 2rem auto 0rem auto;
+    text-align: center;
+    font-size: 1rem;
+    clear:both;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) { 
+  p.intro {
+    font-size:1.75rem;
+    letter-spacing: 0.09rem;
+    line-height: 2.6rem;
+    max-width: 80%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size:1.75rem;
+    letter-spacing: 0.09rem;
+    line-height: 1.75rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  p.project-description {
+    margin: -2.3rem 4rem 1.5rem 4rem;
+    padding-right: 1rem;
+    text-align: center;
+    font-size: 1.17rem;
+  }
+
+  div p.project-type {
+    display: block;
+    padding: 0rem;
+    margin: 1rem 0.8rem 1rem 0.8rem;
+    text-align: center;
+    font-size: 1.07rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 0rem;
+    width: 90%;
+    position: relative;
+  }
+
+  div img.project-screen {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin: 0rem auto;
+    padding: 1rem;
+    position: relative;
+    clear:both;
+  }
+
+  div a.button {
+    display: block;
+    margin: 2rem auto 0rem auto;
+    text-align: center;
+    font-size: 1.15rem;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 700px) {
+  p.intro {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+    line-height: 2.9rem;
+    max-width: 75%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 1.85rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 0rem 0.8rem 1rem 2rem;
+    padding-right: 1rem;
+    font-size: 1.05rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2rem;
+    text-align: left;
+    font-size: 0.87rem;
+  }
+
+  div.project-bg {
+    display: table;
+    padding-bottom: 2.5rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  div img.project-screen {
+    display: table-cell;
+    max-width: 117%;
+    height: auto;
+    margin: -7.5rem 1.15rem 0rem 0rem;
+    padding-left: 0.5rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2rem;
+    margin-bottom: 2.75rem;
+    text-align: center;
+    font-size: 0.87rem;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 776px) {
+  p.intro {
+    font-size: 2.15rem;
+    letter-spacing: 0.099rem;
+    line-height: 2.9rem;
+    max-width: 75%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.15rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 0rem 0.8rem 1rem 2rem;
+    padding-right: 1rem;
+    font-size: 1.05rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2rem;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  div figure.line {
+    margin-bottom: 1.1rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 2.75rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  div img.project-screen {
+    max-width: 120%;
+    height: auto;
+    margin: -8.5rem 1.15rem 0rem 0rem;
+    position: relative;
+    clear:both;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 777px) and (max-width: 874px) {
+  p.intro {
+    font-size: 2.25rem;
+    letter-spacing: 0.099rem;
+    line-height: 2.9rem;
+    max-width: 75%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.25rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.9rem 1rem 2.25rem;
+    padding-right: 1rem;
+    font-size: 1.1rem;
+    max-width: 45%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2.25rem;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  div.project-bg {
+    padding-bottom: 4.65rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  div img.project-screen {
+    max-width: 125%; /*use % instead of rems so it renders correctly in Safari*/
+    height: auto;
+    margin: -9.25rem 1.15rem 0rem 0rem;
+    padding-left: 1rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 2.25rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (min-width: 875px) and (max-width: 991px) {
+  p.intro {
+    font-size: 2.35rem;
+    letter-spacing: 0.099rem;
+    line-height: 3.3rem;
+    max-width: 70%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.35rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.25rem 1rem 3.5rem;
+    padding-right: 2rem;
+    font-size: 1.15rem;
+    max-width: 35%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 2.25rem 0rem 3.5rem;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  div.project-bg {
+    padding-bottom:8.5rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  div figure.line {
+    margin-bottom: -1.2rem;
+  }
+
+  div img.project-screen {
+    display: table-cell;
+    max-width: 113%;
+    height: auto;
+    margin: -9.2rem 2.5rem 0rem 0rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 1.25rem 3.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  div.pitchtext {
+    padding:0rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1274px){
+  p.intro {
+    font-size: 2.5rem;
+    letter-spacing: 0.099rem;
+    line-height: 3.3rem;
+    max-width: 60%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.5rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 2.75rem 0.8rem 1rem 4rem;
+    font-size: 1.2rem;
+    max-width: 40%;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 4rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    display: table;
+    padding-bottom: 5.25rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  div img.project-screen {
+    display: table-cell;
+    max-width: 120%;
+    height: auto;
+    margin: -8.2rem 3rem 0rem 0rem;
+    padding-left: 2rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    margin: 1.35rem 0rem 0rem 4rem;
+    margin-bottom: 0rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  p.intro {
+    font-size: 2.5rem;
+    letter-spacing: 0.099rem;
+    line-height: 140%;
+    max-width: 60%;
+    margin: 15rem auto 14.15rem auto;
+  }
+
+  div h1.project-name {
+    font-size: 2.5rem;
+    letter-spacing: 0.099rem;
+  }
+
+  p.project-description {
+    margin: 5rem 0.25rem 1.5rem 6rem;
+    font-size: 1.25rem;
+  }
+
+  div p.project-type {
+    padding: 0rem;
+    margin: 0rem 0rem 0rem 6rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  div.project-bg {
+    display: table;
+    padding-bottom: 6rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  div img.project-screen {
+    display: table-cell;
+    max-width: 113.65%;
+    height: auto;
+    margin: -10.5rem 5rem 0rem 0rem;
+    padding-left: 2rem;
+    position: relative;
+    clear: both;
+  }
+
+  div a.button {
+    margin: 1.75rem 0rem 0rem 6rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+
+/**************************************************
+
+PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
+
+**************************************************/
+
+@media only screen and (max-width: 320px) { 
+
+  div a.watchvideo-desktop {
+    display: none;
+  }
+
+  div a.watchvideo-mobile {
+    display: table-cell;
+    margin: -3.3rem auto 0rem auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    clear:both;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 2.25rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 2.1rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 0.95rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 479px) { 
+  
+  div a.watchvideo-desktop {
+    display: none;
+  }
+
+  div a.watchvideo-mobile {
+    display: block;
+    margin: -3.25rem auto 0rem auto;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    clear: both;
+    bottom: 0rem;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 1.95rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 2.5rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.1rem;
+    margin-bottom: 4rem; 
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) { 
+
+  div a.watchvideo-desktop {
+    display: none;
+  }
+
+  div a.watchvideo-mobile {
+    display: block;
+    margin: -3.25rem auto 0rem auto;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    clear:both;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 2.05rem;
+  }
+
+  div.vidtitle-shangrla h1 {
+    margin-top: 2.5rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 3rem;
+    margin-top: 4rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.25rem;
+    margin-bottom: 4rem; 
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 700px) {
+
+  div a.watchvideo-desktop {
+    margin-bottom: 3.6rem; 
+  }
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 2.4rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 2.75rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 3rem;
+    margin-top: 4.5rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.25rem;
+    margin-bottom: 2.75rem; 
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 776px) {
+
+  div a.watchvideo-desktop {
+    margin-bottom: 3.5rem; 
+  }
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 2.9rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 1.8rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 3.5rem;
+    margin-top: 4.5rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.4rem;
+    margin-bottom: 2.75rem; 
+  }
+}
+
+@media only screen and (min-width: 777px) and (max-width: 874px) {
+
+  div a.watchvideo-desktop {
+    margin-bottom: 1.7rem; 
+  }
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 2.9rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 1.8rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 4rem;
+    margin-top: 4.5rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.4rem;
+  }
+
+  div.vidtype-shangrila p {
+    margin-bottom: 3rem; 
+  }
+}
+
+@media only screen and (min-width: 875px) and (max-width: 991px) {
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 3.5rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 2rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 4.5rem;
+    margin-top: 4.5rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.45rem;
+    margin-bottom: 1.5rem; 
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1274px){
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 4.5rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 1rem;  
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 5rem;
+    margin-top: 4.5rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.55rem;
+    margin-bottom: 1rem; 
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
+  div.vidprojecttitle h1 {
+    font-size: 5.5rem;
+  }
+
+  div.vidtitle-shangrila h1 {
+    margin-top: 0rem;
+  }
+
+  div.vidtitle-tap h1 {
+    font-size: 6rem;
+    margin-top: 4.5rem;
+  }
+
+  div.vidprojecttype p {
+    font-size: 1.65rem;
+    margin-bottom: 0rem;
+  }
+}
+
+
+
+/**************************************************
+
+TAP PROJECT MEDIA QUERIES AND BREAKPOINTS
+
+**************************************************/
+
+@media only screen and (max-width: 320px) { 
+
+  h2 {
+    margin: 10rem auto 3.5rem auto;
+  }
+
+  h2.firstheading {
+    margin-top: 5rem;
+  }
+
+  .primer {
+    font-size: 1.45rem;
+  }
+
+  p span.subheadings {
+    max-width: 90%;
+    margin-top: 5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  span.titles {
+    margin-top: 1.9rem;
+  }
+
+  span.resulttitles {
+    display: block;
+    font-family: 'SofiaPro-Bold', sans-serif;
+    font-weight: normal;
+    font-size: 0.925rem;
+    color: #999999;
+    text-align: left;
+    letter-spacing: 0.04rem;
+    margin-top: 0rem;
+  }
+
+  div img.imgTap {
+    width: 100%;
+  }
+
+  div img.imgTapresults {
+      width: 95%;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 479px) { 
+
+  h2 {
+    margin: 10rem auto 3.5rem auto;
+  }
+
+  h2.firstheading {
+    /*margin-top: 5rem;*/
+  }
+
+  .primer {
+    font-size: 1.55rem;
+  }
+
+  p span.subheadings {
+    max-width: 72%;
+    /*margin-top: 5rem;*/
+    margin-bottom: 0.25rem;
+  }
+
+  span.titles {
+    /*margin-top: 1.95rem;*/
+  }
+
+  span.resulttitles {
+    display: block;
+    font-family: 'SofiaPro-Bold', sans-serif;
+    font-weight: normal;
+    font-size: 0.925rem;
+    color: #999999;
+    text-align: left;
+    letter-spacing: 0.04rem;
+    margin-top: 0rem;
+  }
+
+  div img.imgTap {
+    width: 100%;
+  }
+
+  div img.imgTapresults {
+    width: 97%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) { 
+
+  div img.imgTap {
+    width: 100%;
+  }
+
+  div img.imgTapresults {
+    width: 97%;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 700px) {
+
+  div img.imgTap {
+    width: 99%;
+  }
+
+div img.imgTapresults {
+    width: 97%;
+  }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 776px) {
+
+  h2 {
+    margin: 19.5rem auto 3.5rem auto;
+  }
+
+  p span.subheadings {
+    max-width: 72%;
+    /*margin-top: 5.5rem;*/
+    margin-bottom: 0.25rem;
+  }
+
+  span.titles {
+    /*margin-top: 1.5rem;*/
+  }
+
+  div img.imgTap {
+    width: 97.25%;
+  }
+}
+
+@media only screen and (min-width: 777px) and (max-width: 874px) {
+
+  div img.imgTap {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 875px) and (max-width: 991px) {
+
+  div img.imgTap {
+    width: 95%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************
+
+JAVASCRIPT
+
+*******************************************/
+
+/*headroom.js script*/
+
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+    transition: transform .32s ease-in-out;
+    transition-property: transform;
+    transition-duration: 0.32s;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;
+  will-change: transform;
+}
+
+.headroom--unpinned {
+  transform:translateY(-100%);
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+.header--fixed {
+  position: fixed;
+  z-index: 10;
+  right:0;
+  left:0;
+  top:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
