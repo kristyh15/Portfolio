@@ -40,7 +40,6 @@
     url('fonts/hinted-CalibreLightItalic.svg#CalibreLightItalic') format('svg');
 }
 
-
 /*Sofia Pro Semi-Bold*/
 @font-face {
   font-family: 'SofiaPro-SemiBold';
@@ -130,25 +129,24 @@ nav {
   background: transparent;
 }
 
-@media (min-width: 40em) {
-  nav{
-    top: 0em;
-    left: 0em;
-  }
+ul a.button-nav {
+  list-style-type: none;
+  float: right;
+  display: inline-block;
+  margin: 0.75rem 1rem 1.55rem 3.5rem;
+  color: #cdbe8c;
+  background: transparent;
+  text-decoration: none;
+  -webkit-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out;
 }
 
 nav a:hover, nav a:focus {
   text-decoration: none;
 }
 
-.button-nav {
-  display: inline-block;
-  padding-top: 1.6rem;
-  color: #cdbe8c;
-  background: transparent;
-  text-decoration: none;
-  -webkit-transition: background-color 0.35s ease-out;
-  transition: background-color 0.35s ease-out;
+.navbg-home { /*background for main navigation on home page*/
+  background-color: #f6f5f2;
 }
 
 .button-nav:hover, .button-nav:focus {
@@ -178,110 +176,6 @@ FOOTER
 
 /*******************************************
 
-VIDEO
-
-*******************************************/
-
-div video {
-  display: inline-block;
-  position: relative;
-  height: auto;
-  width: 100%;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  z-index: -1;
-  vertical-align: middle;
-  -webkit-filter: brightness(53%); /*Chrome, Safari, Opera*/
-  filter: brightness(53%); /*Firefox*/
-}
-
-.vidcontainer {
-  position: relative;
-  clear: both;
-  width: 100%;
-  margin: 0rem auto;
-  z-index: 8;
-}
-
-video::-webkit-media-controls-start-playback-button { /*hides native play buttons including iOS*/
-  display: none;
-}
-
-.watchvideo {
-  position: absolute;
-  font-family: 'SofiaPro-SemiBold';
-  font-weight: normal;
-  font-size: 1rem;
-  color: #f6f5f2;
-  text-align: center;
-  text-decoration: none;
-  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
-  border-style: solid;
-  border-width: 0.125rem;
-  border-color: #f6f5f2;
-  background-color: transparent;
-}
-
-.watchvideo:focus, .watchvideo:hover {
-  color: #202021;
-  border-color: #f6f5f2;
-  background-color: #f6f5f2;
-  -webkit-transition: background-color 0.3s ease-out;
-  transition: background-color 0.3s ease-out;
-  cursor: pointer;
-}
-
-.vidcontainer {
-  position: relative;
-}
-
-.vidprojecttitle {
-  display: block;
-  position: absolute;
-  top: 0; 
-  right: 0; 
-  bottom: 4rem; 
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div.vidprojecttitle h1 {
-  color: white;
-  font-family: 'SofiaPro-SemiBold', sans-serif;
-  font-weight: normal;
-  font-size: 6rem;
-  text-align: center;
-  letter-spacing: 0.07rem;
-}
-
-.vidprojecttype {
-  display: block;
-  position: absolute;
-  top: 6rem; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div.vidprojecttype p {
-  color: white;
-  font-family: 'SofiaPro-SemiBold', sans-serif;
-  font-weight: normal;
-  font-size: 1.65rem;
-  text-align: center;
-  letter-spacing: 0.07rem;
-}
-
-
-/*******************************************
-
 LISTS
 
 *******************************************/
@@ -294,7 +188,7 @@ dd {
   line-height: 1.9rem;
 }
 
-dd.whatwhy {
+dd.whatwhy { /*for results*/
   display: list-item;
   list-style-type: disc;  
   font-family: 'Calibre-Regular', sans-serif;
@@ -411,12 +305,6 @@ p.typecolor-Gusto {
 p.typecolor-Shangrila {
   color: #d32b2b;
 }
-
-/*img.clientlogo {
-  max-width: 5%;
-  max-height: 100%;
-  vertical-align: middle;
-}*/
 
 .line {
   height:5.5rem;
@@ -624,13 +512,202 @@ img.project-screen {
 
 /*******************************************
 
+PROJECT PAGE VIDEO
+
+*******************************************/
+
+div video {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -1;
+  vertical-align: middle;
+  -webkit-filter: brightness(60%); /*Chrome, Safari, Opera*/
+}
+
+/*.dimVideo {
+  -webkit-filter: brightness(53%); 
+  filter: brightness(53%); /*Firefox*/
+/*}*/
+
+.vidcontainer {
+  position: relative;
+}
+
+video::-webkit-media-controls-start-playback-button { /*hides native play buttons including iOS*/
+  display: none;
+}
+
+.vidprojecttitle {
+  display: block;
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 4rem; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.vidprojecttitle h1 {
+  color: white;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 6rem;
+  text-align: center;
+  letter-spacing: 0.07rem;
+}
+
+.vidprojecttype {
+  display: block;
+  position: absolute;
+  top: 6rem; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.vidprojecttype p {
+  color: white;
+  font-family: 'SofiaPro-SemiBold', sans-serif;
+  font-weight: normal;
+  font-size: 1.65rem;
+  text-align: center;
+  letter-spacing: 0.07rem;
+}
+
+div.vidprojectbutton {
+  display: block;
+  position: absolute;
+  top: 15rem; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watchvideo-desktop {
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 1rem;
+  color: #f6f5f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
+  margin-top: 1rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-color: #f6f5f2;
+  background-color: transparent;
+}
+
+.watchvideo-desktop:focus, .watchvideo-desktop:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.watchvideo-mobile {
+  position: absolute;
+  font-family: 'SofiaPro-SemiBold';
+  font-weight: normal;
+  font-size: 1rem;
+  color: #f6f5f2;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.2rem 1.8rem 0.9rem 1.8rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-color: #f6f5f2;
+  background-color: transparent;
+}
+
+.watchvideo-mobile:focus, .watchvideo-mobile:hover {
+  color: #202021;
+  border-color: #f6f5f2;
+  background-color: #f6f5f2;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+}
+
+.animated { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  -moz-animation-duration: 1s; /* Firefox */
+  animation-duration: 1s; 
+
+  -webkit-animation-fill-mode: both; /* Chrome, Safari, Opera */
+  -moz-animation-fill-mode: both; /* Firefox */
+  animation-fill-mode: both;
+
+  -webkit-animation-delay: 0.01s; /* Chrome, Safari, Opera */
+  -moz-animation-delay:0.01s; /* Firefox */
+  animation-delay: 0.01s;
+}
+
+@-webkit-keyframes pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+
+
+/*******************************************
+
 PROJECT PAGES SPECIFIC STYLING 
 
 *******************************************/
 
 .pitchbg {
   width: 100%;
-  margin-top: -1.5rem;
   margin-bottom: 3rem;
 }
 
@@ -651,16 +728,31 @@ PROJECT PAGES SPECIFIC STYLING
 }
 
 .pitchtext {
-  font-family: 'Calibre';
+  font-family: 'Calibre-Regular', sans-serif;
   font-weight: normal;
-  font-size: 1.25rem;
-  line-height: 140%;
+  font-size: 1.4rem;
+  line-height: 150%;
   text-align: left;
-  padding: 4.5% 24% 4% 24%;
+  max-width: 732px;
+  padding: 70px 20px;
+  margin: 0 auto;
 }
 
 .pitchtextcolor-Tap {
   color: #0e5098;
+}
+
+.roleteam {
+  display: block;
+  font-family: 'Calibre-Regular', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  text-align: center;
+  max-width: 732px;
+  padding: 0px 20px 0px 20px;
+  margin: 0 auto;
+  color: #999999;
 }
 
 h2 {
@@ -672,10 +764,13 @@ h2 {
   letter-spacing: 0.25rem;
   line-height: 2rem;
   text-transform: uppercase;
-  margin: 17rem auto 3.5rem auto;
+  margin: 19.5rem auto 3.5rem auto;
   clear: both;
 }
 
+h2.firstheading {
+  margin-top: 12rem;
+}
 
 h2.heading2color-Gusto {
   color: #125a2f;
@@ -693,18 +788,6 @@ h2.heading2color-Shangrila {
   color: #d32b2b;
 }
 
-/*.subheadings {
-  display: block;
-  font-family: 'Calibre-RegularItalic', 'Calibre-Regular', sans-serif;
-  font-weight: normal;
-  font-size: 1.3rem;
-  line-height: 140%;
-  text-align: left;
-  max-width: 51%;
-  color: #666666;
-  margin: 0rem auto 1.25rem auto;
-}*/
-
 .primer {
   display: block;
   font-family: 'Calibre-LightItalic', sans-serif;
@@ -712,66 +795,51 @@ h2.heading2color-Shangrila {
   font-size: 1.75rem;
   line-height: 140%;
   text-align: left;
-  max-width: 60%;
-  color: #666666;
-  margin: 0rem auto 1.25rem auto;
-  padding-left: 2rem;
+  max-width: 732px;
+  color: #777777;
+  margin: 0rem auto 0rem auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-
-span.titles { /*for section titles*/
+span.titles { /*for grey section titles*/
+  display: block;
   font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
-  font-size: 0.88rem;
-  color: #202021;
+  font-size: 0.925rem;
+  color: #999999;
   text-align: left;
   letter-spacing: 0.04rem;
-  margin: 7rem 0rem 1rem 0rem;
+  margin-top: 2.75rem;
 }
 
-.roleteam {
-  float: right;
-  font-family: 'Calibre', sans-serif;
+span.resulttitles { /*for grey result titles*/
+  display: block;
+  font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.925rem;
+  color: #999999;
   text-align: left;
-  text-transform: initial;
-  color: #202021;
-  margin: 0rem auto 1.1rem auto;
+  letter-spacing: 0.04rem;
+  margin-top: 0rem;
 }
 
-h3 {
+p span.subheadings {
   display: block;
   font-family: 'SofiaPro-Bold', sans-serif;
   font-weight: normal;
   font-size: 0.8rem;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05rem;
   line-height: 1.2rem;
   text-transform: uppercase;
-  margin: 3rem auto 0.8rem auto;
-  clear: right;
+  margin-top: 7.5rem;
+  margin-bottom: 0.25rem;
+  color: #202021;
 }
 
-h3.results {
-  margin-top: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-h3.heading3color-Gusto {
-  color: #125a2f;
-}
-
-h3.heading3color-Tap {
-  color: #0e5098;
-}
-
-h3.heading3color-Kiehls {
-  color: #333333;
-}
-
-h3.heading3color-Shangrila {
-  color: #d32b2b;
+p span.firstsubheading {
+  margin-top: 0rem;
 }
 
 .paragraph {
@@ -779,42 +847,35 @@ h3.heading3color-Shangrila {
   font-family: 'Calibre-Regular', sans-serif;
   font-weight: normal;
   font-size: 1.25rem;
-  line-height: 140%;
+  line-height: 145%;
   text-align: left;
-  max-width: 51%;
+  max-width: 732px;
   color: #202021;
   margin: 0rem auto 1.25rem auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-.imgTap-wireframes {
-  display: inline;
+div.imgTapcontainer {
+  display: flex;
+  align-items: flex-end;
+  max-width: 72%;
   height: auto;
-  float: left;
-  margin-bottom: 1rem;
-  margin-right: 0.75rem;
+  color: #666666;
+  margin: 0rem auto;
+}
+
+div img.imgTap-wireframes {
+  margin: 1.75rem auto;
 }
 
 div img.imgTap {
   display: block;
-  width: 70%;
+  width: 900px;
   height: auto;
   margin: 0rem auto 1rem auto;
-  clear: both;
-}
-
-div img.imgTap-knowusers {
-  display: block;
-  width: 35%;
-  height: auto;
-  margin: 0rem auto 1rem auto;
-}
-
-div.imgTapcontainer {
-  display: block;
-  clear: both;
-  max-width: 75%;
-  color: #666666;
-  margin: 0rem auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 div img.imgTapresults {
@@ -825,8 +886,13 @@ div img.imgTapresults {
   clear: both;
 }
 
-
-
+div img.imgTapresults {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 
 
 /*******************************************
@@ -888,7 +954,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     font-size: 1.1rem;
     clear:both;
   }
-
 }
 
 @media only screen and (min-width: 321px) and (max-width: 479px) { 
@@ -945,7 +1010,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     font-size: 1rem;
     clear:both;
   }
-
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px) { 
@@ -1003,7 +1067,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     font-size: 1.15rem;
     clear: both;
   }
-
 }
 
 @media only screen and (min-width: 640px) and (max-width: 700px) {
@@ -1057,7 +1120,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     text-align: center;
     font-size: 0.87rem;
   }
-
 }
 
 @media only screen and (min-width: 701px) and (max-width: 776px) {
@@ -1112,7 +1174,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     text-align: center;
     font-size: 0.9rem;
   }
-
 }
 
 @media only screen and (min-width: 777px) and (max-width: 874px) {
@@ -1164,7 +1225,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     text-align: center;
     font-size: 0.95rem;
   }
-
 }
 
 @media only screen and (min-width: 875px) and (max-width: 991px) {
@@ -1223,7 +1283,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   div.pitchtext {
     padding:0rem;
   }
-
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1274px){
@@ -1276,7 +1335,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     text-align: center;
     font-size: 1rem;
   }
-
 }
 
 @media only screen and (min-width: 1275px) {
@@ -1328,7 +1386,6 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
     text-align: center;
     font-size: 1rem;
   }
-
 }
 
 
@@ -1339,7 +1396,12 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 **************************************************/
 
 @media only screen and (max-width: 320px) { 
-  div a.watchvideo {
+
+  div a.watchvideo-desktop {
+    display: none;
+  }
+
+  div a.watchvideo-mobile {
     display: table-cell;
     margin: -3.3rem auto 0rem auto;
     width: 100%;
@@ -1368,13 +1430,19 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 321px) and (max-width: 479px) { 
-  div a.watchvideo {
+  
+  div a.watchvideo-desktop {
+    display: none;
+  }
+
+  div a.watchvideo-mobile {
     display: block;
     margin: -3.25rem auto 0rem auto;
     text-align: center;
     font-size: 1rem;
     width: 100%;
     clear: both;
+    bottom: 0rem;
   }
 
   div.vidprojecttitle h1 {
@@ -1397,7 +1465,12 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px) { 
-  div a.watchvideo {
+
+  div a.watchvideo-desktop {
+    display: none;
+  }
+
+  div a.watchvideo-mobile {
     display: block;
     margin: -3.25rem auto 0rem auto;
     text-align: center;
@@ -1425,22 +1498,18 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
   }
 }
 
-
 @media only screen and (min-width: 640px) and (max-width: 700px) {
-  div a.watchvideo {
-/*    top: 30%;
-    left: 37.5%;
-    position: fixed;*/
-    text-align: center;
-    font-size: 1rem;
-    clear:both;
-    align-items: center;
-    justify-content: center;
-    margin: 0rem auto;
+
+  div a.watchvideo-desktop {
+    margin-bottom: 5rem; 
+  }
+
+  div a.watchvideo-mobile {
+    display: none;
   }
 
   div.vidprojecttitle h1 {
-    font-size: 2.4rem;
+    font-size: 2.9rem;
   }
 
   div.vidtitle-shangrila h1 {
@@ -1448,18 +1517,26 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
   }
 
   div.vidtitle-tap h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-top: 4.5rem;
   }
 
   div.vidprojecttype p {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-bottom: 2.75rem; 
   }
 }
 
-
 @media only screen and (min-width: 701px) and (max-width: 776px) {
+
+  div a.watchvideo-desktop {
+    margin-bottom: 5rem; 
+  }
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
   }
@@ -1473,15 +1550,22 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     margin-top: 4.5rem;
   }
 
-
   div.vidprojecttype p {
     font-size: 1.4rem;
     margin-bottom: 2.75rem; 
   }
 }
 
-
 @media only screen and (min-width: 777px) and (max-width: 874px) {
+
+  div a.watchvideo-desktop {
+    margin-bottom: 1.7rem; 
+  }
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 2.9rem;
   }
@@ -1504,9 +1588,12 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
   }
 }
 
-
-
 @media only screen and (min-width: 875px) and (max-width: 991px) {
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 3.5rem;
   }
@@ -1524,11 +1611,14 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     font-size: 1.45rem;
     margin-bottom: 1.5rem; 
   }
-
 }
 
-
 @media only screen and (min-width: 992px) and (max-width: 1274px){
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 4.5rem;
   }
@@ -1546,11 +1636,14 @@ PROJECT VIDEO MEDIA QUERIES AND BREAKPOINTS
     font-size: 1.55rem;
     margin-bottom: 1rem; 
   }
-
 }
 
-
 @media only screen and (min-width: 1275px) {
+
+  div a.watchvideo-mobile {
+    display: none;
+  }
+
   div.vidprojecttitle h1 {
     font-size: 5.5rem;
   }
@@ -1580,47 +1673,147 @@ TAP PROJECT MEDIA QUERIES AND BREAKPOINTS
 
 @media only screen and (max-width: 320px) { 
 
+  h2 {
+    margin: 10rem auto 3.5rem auto;
+  }
+
+  h2.firstheading {
+    margin-top: 5rem;
+  }
+
+  .primer {
+    font-size: 1.45rem;
+  }
+
+  p span.subheadings {
+    max-width: 90%;
+    margin-top: 5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  span.titles {
+    margin-top: 1.9rem;
+  }
+
+  span.resulttitles {
+    display: block;
+    font-family: 'SofiaPro-Bold', sans-serif;
+    font-weight: normal;
+    font-size: 0.925rem;
+    color: #999999;
+    text-align: left;
+    letter-spacing: 0.04rem;
+    margin-top: 0rem;
+  }
+
+  div img.imgTap {
+    width: 100%;
+  }
+
+  div img.imgTapresults {
+      width: 95%;
+    }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 479px) { 
+
+  h2 {
+    margin: 10rem auto 3.5rem auto;
+  }
+
+  h2.firstheading {
+    /*margin-top: 5rem;*/
+  }
+
+  .primer {
+    font-size: 1.55rem;
+  }
+
+  p span.subheadings {
+    max-width: 72%;
+    /*margin-top: 5rem;*/
+    margin-bottom: 0.25rem;
+  }
+
+  span.titles {
+    /*margin-top: 1.95rem;*/
+  }
+
+  span.resulttitles {
+    display: block;
+    font-family: 'SofiaPro-Bold', sans-serif;
+    font-weight: normal;
+    font-size: 0.925rem;
+    color: #999999;
+    text-align: left;
+    letter-spacing: 0.04rem;
+    margin-top: 0rem;
+  }
+
+  div img.imgTap {
+    width: 100%;
+  }
+
   div img.imgTapresults {
-    width: 95%;
+    width: 97%;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 639px) { 
 
-}
+  div img.imgTap {
+    width: 100%;
+  }
 
+  div img.imgTapresults {
+    width: 97%;
+  }
+}
 
 @media only screen and (min-width: 640px) and (max-width: 700px) {
 
-}
+  div img.imgTap {
+    width: 99%;
+  }
 
+div img.imgTapresults {
+    width: 97%;
+  }
+}
 
 @media only screen and (min-width: 701px) and (max-width: 776px) {
 
-}
+  h2 {
+    margin: 19.5rem auto 3.5rem auto;
+  }
 
+  p span.subheadings {
+    max-width: 72%;
+    /*margin-top: 5.5rem;*/
+    margin-bottom: 0.25rem;
+  }
+
+  span.titles {
+    /*margin-top: 1.5rem;*/
+  }
+
+  div img.imgTap {
+    width: 97.25%;
+  }
+}
 
 @media only screen and (min-width: 777px) and (max-width: 874px) {
 
+  div img.imgTap {
+    width: 95%;
+  }
 }
-
-
 
 @media only screen and (min-width: 875px) and (max-width: 991px) {
 
-}
-
-
-@media only screen and (min-width: 992px) and (max-width: 1274px){
-
-}
-
-
-@media only screen and (min-width: 1275px) {
-
+  div img.imgTap {
+    width: 95%;
+  }
 }
 
 
