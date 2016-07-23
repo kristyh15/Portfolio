@@ -58,17 +58,19 @@
 
 <!--START VIDEO-->
 
-  <div class="vidcontainer">
+  <div id="myVideoContainer" class="vidcontainer">
 
-    <video id="myVideo">
+    <video id="myVideo" poster="video/Tap-poster.png">
       <source src="video/Tap.mp4" type="video/mp4">
+      <source src="video/Tap.ogg" type="video/ogg">
+      <source src="video/Tap.webm" type="video/webm">
       <source src="https://09-lvl3-pdl.vimeocdn.com/01/4767/4/123837496/354316361.mp4?" type="video/mp4">
     </video>
 
     <!--start video text and watch video button-->
     <div>
       <div class="grid-row">
-        <div class="vidprojecttitle vidtitle-tap ">
+        <div class="vidprojecttitle vidtitle-tap">
           <h1>Tap</h1>
         </div>
       </div>
@@ -77,13 +79,13 @@
         <p>interaction design, service design</p>
       </div>
 
-
-      <div>
+      <!--button to resume video-->
+      <div id="resumeVideo">
          <a class="video-resume" href="#">&#9658;</a>
       </div>
 
-
-      <div>
+      <!--button to pause video-->
+      <div id="pauseVideo">
          <a class="video-pause" href="#">&#2405;</a>
       </div>
 
@@ -575,7 +577,6 @@
       }());
 
 
-          // $( document ).ready(function() {
              // jQuery for playing project video and hiding buttons with desktop screen button //
              jQuery( document ).ready(function($) {
                 $('.watchvideo-desktop').click(function() {
@@ -585,9 +586,25 @@
                     $('.watchvideo-desktop').hide();
                     $('.watchvideo-mobile').hide();
                     $('.dimVideo').hide();
+                    $('.video-pause').show().delay(1000).fadeOut();
+                    // $('#myVideoContainer').on('mousemove', function(event){
+                    //   $(this).find('.video-pause').show();
+                    // }); 
+
+                    $('#myVideoContainer').on('mousemove', function(event){
+                      $(this).find('.video-pause').show();
+
+                        $('.video-pause').click(function() { 
+                          $('#pauseVideo').hide();
+                          $('#resumeVideo').show();
+                        });
+                  
+                    }); 
+
                     $('header').hide();
                 });
             });
+
 
             // jQuery for playing project video and hiding buttons with mobile screen button // 
             jQuery( document ).ready(function($) {
@@ -598,19 +615,11 @@
                     $('.watchvideo-mobile').hide();
                     $('.watchvideo-desktop').hide();
                     $('.dimVideo').hide();
+                    $(".video-pause").show().delay(1000).fadeOut();
+                    // $('.video-resume').hide();
                     $('header').hide();
                 });
             });
-              //   $('.watchvid').click(function() {
-              //       //event.preventDefault();
-              //       // var vidURL = $(this).attr('rel');
-              //       // $('#myVideo').attr('src', vidURL);
-              //       var video = $('#myVideo').get(0);
-              //       video.load();
-              //       video.play();
-              // });
-      // });
-
 
 
 
@@ -622,12 +631,13 @@
                     $('.vidprojecttype').hide();
                     $('.watchvideo-mobile').hide();
                     $('.watchvideo-desktop').hide();
-                    $('.dimVideo').hide();
                     $('.video-pause').hide();
                     $('.video-resume').show();
                     $('header').show();
                 });
             });
+
+
 
             // resume video; hide resume/play button and show pause button
             jQuery( document ).ready(function($) {
@@ -637,14 +647,11 @@
                     $('.vidprojecttype').hide();
                     $('.watchvideo-mobile').hide();
                     $('.watchvideo-desktop').hide();
-                    $('.dimVideo').hide();
                     $('.video-resume').hide();
                     $('.video-pause').show();
                     $('header').hide();
                 });
             });
-
-
 
 
 
