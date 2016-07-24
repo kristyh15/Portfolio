@@ -50,7 +50,7 @@
 
 
 
-  <div class="grid-row">
+  <div class="grid-row flexcroll">
 
 
 
@@ -66,6 +66,18 @@
       <source src="video/Tap.webm" type="video/webm">
       <source src="https://09-lvl3-pdl.vimeocdn.com/01/4767/4/123837496/354316361.mp4?" type="video/mp4">
     </video>
+
+    <!--video current and total time; use with videotime.js-->
+    <div id="timeVideo" class="video-time">
+      <span id="currenttime"></span>&nbsp;&nbsp;<span id="duration"></span>
+    </div>
+
+
+
+
+
+
+
 
     <!--start video text and watch video button-->
     <div>
@@ -551,6 +563,7 @@
 
     <!--video scripts-->
     <script src="js/modernizr-html5video.js"></script>
+    <script src="js/videotime.js"></script>
 
     <!--main navigation srcipts-->
     <script src="js/navigationbackground.js"></script>
@@ -585,25 +598,78 @@
                     $('.vidprojecttype').hide();
                     $('.watchvideo-desktop').hide();
                     $('.watchvideo-mobile').hide();
-                    $('.dimVideo').hide();
-                    $('.video-pause').show().delay(1000).fadeOut();
-                    // $('#myVideoContainer').on('mousemove', function(event){
-                    //   $(this).find('.video-pause').show();
-                    // }); 
+                    $('#timeVideo').show().delay(2500).fadeOut();;
+                    $('.video-pause').show().delay(2500).fadeOut();
 
+
+
+
+
+                    // first mouse move //
+                    // when mouse moves while video is playing, show the pause button for 5sec and switch to resume button when pause button is clicked //
                     $('#myVideoContainer').on('mousemove', function(event){
-                      $(this).find('.video-pause').show();
-
+                      $(this).find('.video-pause').show().delay(5000).fadeOut();
                         $('.video-pause').click(function() { 
+                          $('.video-pause').hide();
                           $('#pauseVideo').hide();
+                          $('.video-resume').show();
                           $('#resumeVideo').show();
+
+
+                          
+
+                          // when mouse moves, show resume button. When clicked, hide resume button and show pause button for 1sec //
+                          $('#myVideoContainer').on('mousemove', function(event){
+                            $(this).find('.video-resume').show();
+                              $('.video-resume').click(function() { 
+                                $('.video-resume').hide();
+                                $('#resumeVideo').hide();
+                                $('.video-pause').hide();
+                                $('#pauseVideo').hide();
+                                  
+//up till here its fine
+
+
+                                $('#myVideoContainer').on('mousemove', function(event){
+                                  $(this).find('#pauseVideo').show();
+                                  $('.video-resume').hide();
+
+                                    $('.video-pause').click(function() { 
+                                      $('#myVideo').get(0).pause();
+                                      $('#resumeVideo').show();
+                                      $('.video-resume').show();
+                                    });
+
+
+
+
+                                      $('.video-resume').click(function() { 
+                                        $('.video-resume').get(0).play();
+                                        $('.video-resume').hide();
+                                        $('#resumeVideo').hide();
+                                      });
+                                }); 
+                              });
+                          }); 
                         });
-                  
                     }); 
 
+
                     $('header').hide();
+
+
                 });
             });
+
+
+
+
+
+
+
+
+
+
 
 
             // jQuery for playing project video and hiding buttons with mobile screen button // 
@@ -616,7 +682,6 @@
                     $('.watchvideo-desktop').hide();
                     $('.dimVideo').hide();
                     $(".video-pause").show().delay(1000).fadeOut();
-                    // $('.video-resume').hide();
                     $('header').hide();
                 });
             });
@@ -634,6 +699,9 @@
                     $('.video-pause').hide();
                     $('.video-resume').show();
                     $('header').show();
+                    // $("#myVideo")[0].volume = 1;
+                    // $("#myVideo").animate({volume: 0}, 2000);
+
                 });
             });
 
@@ -652,6 +720,48 @@
                     $('header').hide();
                 });
             });
+
+
+
+
+
+            // load poster, title, project type, and watch video button after video ends //
+            var video= $('#myVideo').get(0);       
+            video.addEventListener('ended',function(){
+                video.load();   
+                $('.vidprojecttitle').show();
+                $('.vidprojecttype').show();
+                $('.watchvideo-desktop').show();
+            },false);
+
+
+
+
+
+
+
+            // myVideoPlayer.addEventListener('durationchange', function() {
+            //     console.log('Duration change', myVideoPlayer.duration);
+            // });
+
+
+
+
+            // window.setInterval(function(t){
+            //   if (video.readyState > 0) {
+            //     var duration = $('#duration').get(0);
+            //     var vid_duration = Math.round(video.duration);
+            //     duration.firstChild.nodeValue = vid_duration;
+            //     clearInterval(t);
+            //   }
+            // },500);
+
+
+
+
+
+
+
 
 
 
