@@ -90,6 +90,12 @@ body {
   background-color: #f6f5f2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*::-webkit-scrollbar-thumb{
+    background-color: rgba(246, 245, 242, 1);
+  }*/
+
+
 }
 
 .floatright {
@@ -108,6 +114,19 @@ body {
   text-decoration: none;
 }
 
+/*  ::-webkit-scrollbar
+{
+
+    background-color: red;
+}
+*/
+
+
+
+body::-webkit-scrollbar-thumb {
+  background-color: green;
+  outline: 1px solid blue;
+}
 
 
 /*******************************************
@@ -147,6 +166,7 @@ nav a:hover, nav a:focus {
 
 .navbg-home { /*background for main navigation on home page*/
   background-color: #f6f5f2;
+  opacity: 0.99;
 }
 
 .button-nav:hover, .button-nav:focus {
@@ -527,7 +547,6 @@ div video {
   right:0;
   z-index: -1;
   vertical-align: middle;
-  -webkit-filter: brightness(60%); /*Chrome, Safari, Opera*/
 }
 
 /*.dimVideo {
@@ -654,9 +673,9 @@ div.vidprojectbutton {
   -moz-animation-fill-mode: both; /* Firefox */
   animation-fill-mode: both;
 
-  -webkit-animation-delay: 0.01s; /* Chrome, Safari, Opera */
-  -moz-animation-delay:0.01s; /* Firefox */
-  animation-delay: 0.01s;
+  -webkit-animation-delay: 0.3s; /* Chrome, Safari, Opera */
+  -moz-animation-delay:0.3s; /* Firefox */
+  animation-delay: 0.3s;
 }
 
 @-webkit-keyframes pulse { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -699,29 +718,66 @@ div.vidprojectbutton {
 }
 
 
-.video-pause {
+div a.video-pause {
+  display: none;
   position: absolute;
-  display: inline;
-  width:5rem;
-  height: 5rem;
-  color: red;
+  color: #f6f5f2;
   font-size: 2.5rem;
   font-weight: bold;
   text-decoration: none;
+  bottom: 0;
+  margin-left: 2.25rem;
+  margin-bottom: 1rem;
+  z-index: 99999999;
 }
 
-.video-resume {
-  margin-left: 8rem;
+div a.video-resume {
+  display: none;
   position: absolute;
-  display: inline;
-  width:5rem;
-  height: 5rem;
-  color: blue;
+  color: #f6f5f2;
   font-size: 2.5rem;
   font-weight: bold;
   text-decoration: none;
+  bottom: 0;
+  margin-left: 2.25rem;
+  margin-bottom: 1rem;
+  z-index: 99999999;
 }
 
+
+.progressbar-notloaded { /*the points where the video has not played to yet*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  padding: 30px;
+  width: 100%;
+  cursor: pointer;
+  z-index: 999999;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.progressbar-loading { /*when video is playing*/
+  width: 50%;
+  height: 5px;
+  background: #FFF;
+}
+
+
+.video-time {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 2.2rem;
+  margin-left: 10rem;
+  color: #f6f5f2;
+  z-index: 99999999;
+}
 
 /*******************************************
 
