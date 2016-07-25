@@ -95,7 +95,6 @@ body {
     background-color: rgba(246, 245, 242, 1);
   }*/
 
-
 }
 
 .floatright {
@@ -125,7 +124,6 @@ body {
 
 body::-webkit-scrollbar-thumb {
   background-color: green;
-  outline: 1px solid blue;
 }
 
 
@@ -222,7 +220,7 @@ dd.whatwhy { /*for results*/
 
 dd.numlist {
   display: list-item;
-  list-style-type: decimal;  
+  list-style-type: disc;  
   font-size: 1.05rem;
   max-width: 100%;
   line-height: 1.9rem;
@@ -499,7 +497,7 @@ img.project-screen {
   clear: both;
   position: absolute;
   height: auto;
-  padding-right:1rem;
+  padding-right: 1rem;
   margin: -11.75rem 0rem 0rem -6rem;
 }
 
@@ -631,15 +629,6 @@ div.vidprojectbutton {
   background-color: transparent;
 }
 
-.watchvideo-desktop:focus, .watchvideo-desktop:hover {
-  color: #202021;
-  border-color: #f6f5f2;
-  background-color: #f6f5f2;
-  -webkit-transition: background-color 0.3s ease-out;
-  transition: background-color 0.3s ease-out;
-  cursor: pointer;
-}
-
 .watchvideo-mobile {
   position: absolute;
   font-family: 'SofiaPro-SemiBold';
@@ -655,13 +644,12 @@ div.vidprojectbutton {
   background-color: transparent;
 }
 
-.watchvideo-mobile:focus, .watchvideo-mobile:hover {
+.watchvideo-desktop:focus, .watchvideo-desktop:hover, .watchvideo-mobile:focus, .watchvideo-mobile:hover  {
   color: #202021;
   border-color: #f6f5f2;
   background-color: #f6f5f2;
   -webkit-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
-  cursor: pointer;
 }
 
 .animated { /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -717,67 +705,143 @@ div.vidprojectbutton {
   animation-name: pulse;
 }
 
-
-div a.video-pause {
+div ul li a.video-pause {
   display: none;
   position: absolute;
   color: #f6f5f2;
-  font-size: 2.5rem;
+  font-size: 1.35rem;
   font-weight: bold;
+  letter-spacing: -0.55rem;
   text-decoration: none;
   bottom: 0;
-  margin-left: 2.25rem;
-  margin-bottom: 1rem;
+  margin-left: 0.15rem;
+  margin-bottom: 2.2rem;
   z-index: 99999999;
 }
 
-div a.video-resume {
+div ul li a.video-resume {
   display: none;
   position: absolute;
   color: #f6f5f2;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   bottom: 0;
-  margin-left: 2.25rem;
-  margin-bottom: 1rem;
+  margin-left: 0rem;
+  margin-bottom: 2rem;
   z-index: 99999999;
 }
 
+.video-pause:focus, .video-pause:hover, 
+.video-resume:focus, .video-resume:hover, 
+.video-caption:focus, .video-caption:hover,
+.video-fullscreen:focus, .video-fullscreen:hover {
+  color: #cdbe8c;
+  border-color: #cdbe8c;
+}
 
-.progressbar-notloaded { /*the points where the video has not played to yet*/
-  position: fixed;
-  left: 0;
+.videoControlContainer {
+  display: table-cell;
+}
+
+ul.videoControls {
+  display: table-cell;
+  list-style-type: none;
+  align-content: center;
+}
+
+div ul li img.volume-on, div ul li img.volume-off {
+  display: none;
+  position: absolute;
+  max-width: 1.5rem;
+  height: auto;
   bottom: 0;
-  height: 5px;
-  padding: 30px;
-  width: 100%;
-  cursor: pointer;
-  z-index: 999999;
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  transition: all 500ms ease;
+  margin-left: 3.75rem;
+  margin-bottom: 2.38rem;
+  z-index: 99999999;
 }
-
-.progressbar-loading { /*when video is playing*/
-  width: 50%;
-  height: 5px;
-  background: #FFF;
-}
-
 
 .video-time {
   display: none;
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.525rem;
   margin-left: 10rem;
   color: #f6f5f2;
   z-index: 99999999;
 }
+
+.progressBar {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 2.95rem;
+  margin-left: 18rem;
+  /*width: 56.5rem;*/
+  width: 56.5rem;
+  height: 0.25rem;
+  color: #f6f5f2;
+  z-index: 99999999;
+}
+
+progress.progressBar::-moz-progress-bar-value { 
+  background-color: #f6f5f2; 
+}
+
+progress.progressBar::-webkit-progress-value { 
+  background-color: #f6f5f2; 
+}
+
+progress.progressBar { 
+  background-color: #f6f5f2; 
+}
+
+progress.progressBar[aria-valuenow]:before { /*polyfill*/
+  background: #f6f5f2;
+}
+
+.video-caption {
+  display: none;
+  position: absolute;
+  font-size: 0.92rem;
+  letter-spacing: 0.1rem;
+
+  padding: 0.22rem 0.70rem;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-color: #f6f5f2;
+  background-color: transparent;
+
+  bottom: 0;
+  right: 0;
+  margin-bottom: 2.17rem;
+  margin-right: 10rem;
+  color: #f6f5f2;
+  z-index: 99999999;
+  cursor: pointer;
+}
+
+
+.video-fullscreen {
+  display: none;
+  position: absolute;
+  font-size: 2.67rem;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0.97rem;
+  margin-right: 6rem;
+  color: #f6f5f2;
+  z-index: 99999999;
+  cursor: pointer;
+  -ms-transform: rotate(43deg); /* IE 9 */
+  -webkit-transform: rotate(43deg); /* Chrome, Safari, Opera */
+  transform: rotate(43deg);
+}
+
+
+
 
 /*******************************************
 
