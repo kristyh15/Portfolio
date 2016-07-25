@@ -50,7 +50,7 @@
 
 
 
-  <div class="grid-row flexcroll">
+  <div class="grid-row">
 
 
 
@@ -68,18 +68,12 @@
     </video>
 
     <!--video current and total time; use with videotime.js-->
-    <div id="timeVideo" class="video-time">
+    <div id="videoTime" class="video-time">
       <span id="currenttime"></span>&nbsp;&nbsp;<span id="duration"></span>
     </div>
 
 
-
-
-
-
-
-
-    <!--start video text and watch video button-->
+    <!--video text and watch video button-->
     <div>
       <div class="grid-row">
         <div class="vidprojecttitle vidtitle-tap">
@@ -91,28 +85,28 @@
         <p>interaction design, service design</p>
       </div>
 
-      <!--button to resume video-->
-      <div id="resumeVideo">
-         <a class="video-resume" href="#">&#9658;</a>
-      </div>
-
-      <!--button to pause video-->
-      <div id="pauseVideo">
-         <a class="video-pause" href="#">&#2405;</a>
-      </div>
-
-
-      <!--this button on desktop or big screens-->
-      <div class="pulse animated vidprojectbutton">
+      <div class="pulse animated vidprojectbutton"> <!--this button on desktop or big screens-->
          <a class="watchvideo-desktop" href="#">Watch Video</a>
       </div>
-
-      <!--switch to this button on mobile or small screens-->
-      <div>
+      
+      <div> <!--switch to this button on mobile or small screens-->
         <a class="no-touchevents touchevents watchvideo-mobile" href="#">Watch Video</a>
       </div>
     </div> 
-    <!-- end video text and watch video button-->
+
+
+    <!--controls-->
+    <div class="videoControlContainer">
+      <ul class="videoControls">
+        <li> <a id="resumeVideo" class="video-resume" href="#">&#9654;</a> </li>
+        <li> <a  id="pauseVideo" class="video-pause" href="#">&#9614;&#9614;</a> </li>
+        <li> <img id="volumeOn" class="volume-on" src="img/volume-on.png"> </li>
+        <li> <a id="captionVideo" class="video-caption"> cc </a> </li>
+        <li> <a id="fullscreenVideo" class="video-fullscreen"> ↕ </a> </li>
+      </ul>
+
+      <progress id='videoProgress' class="progressBar" max='100' value='0'><span>0</span>% played</progress>
+    </div>
 
   </div>
 <!--END VIDEO-->
@@ -229,7 +223,7 @@
     <div>
       <p class="paragraph">
        <span class="titles"> Cultural Probes </span> 
-        Each cultural probe contained 3 magnets with tabs to tally good, average, and bad days, 1 cocktail and bar-themed Mad Libs shareable notepad, 1 pen, 1 green and brown leather wallet for personal receipts, and 1 green leather bound personal cocktail recipe notebook. Upon receiving the cultural probe back after ten days of deployment, we conducted interviews and learned about with whom and how they spent their time and money.
+        <!-- Each cultural probe contained 3 magnets with tabs to tally good, average, and bad days, 1 cocktail and bar-themed Mad Libs shareable notepad, 1 pen, 1 green and brown leather wallet for personal receipts, and 1 green leather bound personal cocktail recipe notebook. --> Upon receiving the cultural probe back after ten days of deployment, we conducted interviews and learned about with whom and how they spent their time and money.
       </p>
 
       <img class="imgTap" src="img/Tap-culturalprobes.png" alt="Cultural Probes">
@@ -564,6 +558,8 @@
     <!--video scripts-->
     <script src="js/modernizr-html5video.js"></script>
     <script src="js/videotime.js"></script>
+    <script src="js/videoProgress.js"></script>
+    <!-- <script src="js/seek.js"></script> -->
 
     <!--main navigation srcipts-->
     <script src="js/navigationbackground.js"></script>
@@ -598,8 +594,12 @@
                     $('.vidprojecttype').hide();
                     $('.watchvideo-desktop').hide();
                     $('.watchvideo-mobile').hide();
-                    $('#timeVideo').show().delay(2500).fadeOut();;
-                    $('.video-pause').show().delay(2500).fadeOut();
+                    $('.video-pause').show().delay(3000).fadeOut();
+                    $('.volume-on').show().delay(3000).fadeOut();
+                    $('.video-time').show().delay(3000).fadeOut();
+                    $('.progressBar').show().delay(3000).fadeOut();
+                    $('.video-fullscreen').show().delay(3000).fadeOut();
+                    $('.video-caption').show().delay(3000).fadeOut();
 
 
 
@@ -609,11 +609,22 @@
                     // when mouse moves while video is playing, show the pause button for 5sec and switch to resume button when pause button is clicked //
                     $('#myVideoContainer').on('mousemove', function(event){
                       $(this).find('.video-pause').show().delay(5000).fadeOut();
+                      $(this).find('.volume-on').show().delay(5000).fadeOut();
+                      $(this).find('.video-time').show().delay(5000).fadeOut();
+                      $(this).find('.progressBar').show().delay(5000).fadeOut();
+                      $(this).find('.video-fullscreen').show().delay(5000).fadeOut();
+                      $(this).find('.video-caption').show().delay(5000).fadeOut();
                         $('.video-pause').click(function() { 
                           $('.video-pause').hide();
                           $('#pauseVideo').hide();
                           $('.video-resume').show();
                           $('#resumeVideo').show();
+                          $('.volume-on').show();
+                          $('.video-time').show();
+                          $('.progressBar').show();
+                          $('.video-fullscreen').show();
+                          $('.video-caption').show();
+
 
 
                           
@@ -626,6 +637,12 @@
                                 $('#resumeVideo').hide();
                                 $('.video-pause').hide();
                                 $('#pauseVideo').hide();
+                                $('#volumeOn').show();
+                                $('#videoTime').show();
+                                $('#videoProgress').show();
+                                $('.video-fullscreen').show();
+                                $('.video-caption').show();
+
                                   
 //up till here its fine
 
@@ -638,6 +655,8 @@
                                       $('#myVideo').get(0).pause();
                                       $('#resumeVideo').show();
                                       $('.video-resume').show();
+                                      $('.video-fullscreen').show();
+                                      $('.video-caption').show();
                                     });
 
 
@@ -647,6 +666,8 @@
                                         $('.video-resume').get(0).play();
                                         $('.video-resume').hide();
                                         $('#resumeVideo').hide();
+                                        $('.video-fullscreen').hide();
+                                        $('.video-caption').hide();
                                       });
                                 }); 
                               });
@@ -680,8 +701,8 @@
                     $('.vidprojecttype').hide();
                     $('.watchvideo-mobile').hide();
                     $('.watchvideo-desktop').hide();
-                    $('.dimVideo').hide();
-                    $(".video-pause").show().delay(1000).fadeOut();
+                    $('#videoProgress').hide();
+                    $('.video-pause').show().delay(1000).fadeOut();
                     $('header').hide();
                 });
             });
@@ -699,9 +720,11 @@
                     $('.video-pause').hide();
                     $('.video-resume').show();
                     $('header').show();
-                    // $("#myVideo")[0].volume = 1;
-                    // $("#myVideo").animate({volume: 0}, 2000);
-
+                    $('#videoProgress').show();
+                    $('.video-fullscreen').show();
+                    $('.video-caption').show();
+                    $("#myVideo")[0].volume = 0; //fade in audio after resuming from pause
+                    $("#myVideo").animate({volume: 1}, 2000); 
                 });
             });
 
@@ -723,63 +746,103 @@
 
 
 
-
-
             // load poster, title, project type, and watch video button after video ends //
             var video= $('#myVideo').get(0);       
             video.addEventListener('ended',function(){
                 video.load();   
-                $('.vidprojecttitle').show();
-                $('.vidprojecttype').show();
-                $('.watchvideo-desktop').show();
+                $('.vidprojecttitle').hide().delay(770).fadeIn();
+                $('.vidprojecttype').hide().delay(770).fadeIn();
+                $('.watchvideo-desktop').hide().delay(770).fadeIn();
+                $('header').show();
+                $('.watchvideo-mobile').hide();
+                $('.video-pause').hide();
+                $('.video-resume').hide();
+                $('.volume-on').hide();
+                $('.video-time').hide();
+                $('.progressBar').hide();
+                $('.video-fullscreen').hide();
+                $('.video-caption').hide();
+
+                //hide all controls when mouse moves after video ends
+                $('#myVideoContainer').on('mousemove', function(){
+                    $('header').show();
+                    $('.video-resume').hide();
+                    $('#resumeVideo').hide();
+                    $('.video-pause').hide();
+                    $('#pauseVideo').hide();
+                    $('#volumeOn').hide();
+                    $('#videoTime').hide();
+                    $('#videoProgress').hide();
+                    $('.video-fullscreen').hide();
+                    $('.video-caption').hide();   
+                });
             },false);
 
 
 
+            // pause video using spacebar and prevent page from scrolling down
+            $(document).keydown(function(e) {
+                if (e.which == 32) {
+                    video.paused ? video.play() : video.pause();
+                    $('.vidprojecttitle').hide();
+                    $('.vidprojecttype').hide();
+                    $('.watchvideo-desktop').hide();
+                    $('.watchvideo-mobile').hide();
+                    $('header').show(); // HOW TO HIDE IT WHEN SPACEBAR IS PRESSED AGAIN???
+                    $('.video-pause').show().delay(3000).fadeOut();
+                    $('.volume-on').show().delay(3000).fadeOut();
+                    $('.video-time').show().delay(3000).fadeOut();
+                    $('.progressBar').show().delay(3000).fadeOut();
+                    $('.video-fullscreen').show().delay(3000).fadeOut();
+                    $('.video-caption').show().delay(3000).fadeOut();
+                }
+            });
+            window.onkeydown = function(e) {
+              if (e.which == 32 && e.target == document.body) {
+                e.preventDefault();
+              }
+            };
 
 
 
-
-            // myVideoPlayer.addEventListener('durationchange', function() {
-            //     console.log('Duration change', myVideoPlayer.duration);
-            // });
-
-
-
-
-            // window.setInterval(function(t){
-            //   if (video.readyState > 0) {
-            //     var duration = $('#duration').get(0);
-            //     var vid_duration = Math.round(video.duration);
-            //     duration.firstChild.nodeValue = vid_duration;
-            //     clearInterval(t);
-            //   }
-            // },500);
+            // fullscreeen video on double click
+            var video = document.getElementById("myVideo");
+            document.ondblclick = function(){
+                if(video.requestFullscreen){
+                    video.requestFullscreen();
+                }else if(video.mozRequestFullScreen){
+                    video.mozRequestFullScreen();
+                }else if(video.webkitRequestFullscreen){
+                    video.webkitRequestFullscreen();
+              }
+            };
 
 
+            // click button to fullscreen
+            jQuery( document ).ready(function($) {
+                $('.video-fullscreen').click(function() {
+                    if(video.requestFullscreen){
+                        video.requestFullscreen();
+                    }else if(video.mozRequestFullScreen){
+                        video.mozRequestFullScreen();
+                    }else if(video.webkitRequestFullscreen){
+                        video.webkitRequestFullscreen();
+                  }
+                });
+            });
 
 
-
-
-
-
+            // exit full screen
+            $(document).on('webkitExitFullScreen', function() {       
+              alert("Full Screen Closed"); 
+            });
+            if (document.mozCancelFullScreen) { 
+              alert('Full Screen Closed') 
+            }
 
 
 
     </script>
-
-
-
-<!--         <script type="text/javascript">
-        function goFullscreen(id) {
-          var element = document.getElementById(id);       
-          if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
-          } else if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen();
-          }  
-        }
-        </script> -->
 
 
 
