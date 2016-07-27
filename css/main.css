@@ -310,9 +310,15 @@ HOME PAGE SPECIFIC STYLING
     font-family: 'SofiaPro-Bold', sans-serif;
     font-weight: normal;
     text-align: center;
+    text-decoration: none;
     letter-spacing: 0rem;
     margin: 3.3rem auto;
   }
+
+  .projectname-link:active, .projectname-link:visited {
+    text-decoration: none;
+  }
+  
 
   .namecolor-Tap {
     color: #0e5098;
@@ -993,6 +999,78 @@ PROJECT PAGES SPECIFIC STYLING
     padding-left: 1rem;
   }
 
+  .sharenext {
+    display: block;
+    font-family: 'SofiaPro-Bold', sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 7.5rem;
+    margin-bottom: 0.5rem;
+    color: #202021;
+  }
+
+  div.shareproject {
+    max-width: 732px;
+    margin: 10rem auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .share-link {
+    text-decoration: none;
+  }
+
+  img.share-icon {
+    width: 2.5rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0.25rem;
+  }
+
+  img.share-icon:hover {
+    opacity: 0.5;
+  }
+
+  .nextproject {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .nextproject-name {
+    font-family: 'SofiaPro-Bold', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0rem;
+    margin: 0.6rem auto 0.5rem auto;
+  }
+
+  .nextproject-link {
+    text-decoration: none;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0rem;
+    margin: 0.6rem auto 0.5rem auto;
+  }
+
+  .nextproject-line {
+    height:3rem;
+    width: 2px; /*pixels so it doesn't change size when readjusting viewport*/
+    justify-content: center;
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+  }
+
+  .nextproject-line:nth-child(1) { /*determines which child overlaps, in this case it's the first one*/
+    position: relative;
+  }
 
 
 /*******************************************
@@ -1065,7 +1143,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size:1.75rem;
       letter-spacing: 0.09rem;
       line-height: 1.85rem;
@@ -1121,7 +1199,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size:1.75rem;
       letter-spacing: 0.09rem;
       line-height: 1.75rem;
@@ -1178,7 +1256,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size: 1.85rem;
       letter-spacing: 0.099rem;
     }
@@ -1231,7 +1309,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size: 2.15rem;
       letter-spacing: 0.099rem;
     }
@@ -1285,7 +1363,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size: 2.25rem;
       letter-spacing: 0.099rem;
     }
@@ -1336,7 +1414,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size: 2.35rem;
       letter-spacing: 0.099rem;
     }
@@ -1394,7 +1472,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size: 2.5rem;
       letter-spacing: 0.099rem;
     }
@@ -1446,7 +1524,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size: 2.5rem;
       letter-spacing: 0.099rem;
     }
