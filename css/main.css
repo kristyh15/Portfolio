@@ -159,7 +159,7 @@ BODY / OVERALL SCOPE
   }
 
 
-  ::-moz-scrollbar {
+/*  ::-moz-scrollbar {
     width:10px;
   }
 
@@ -177,7 +177,7 @@ BODY / OVERALL SCOPE
 
   ::-moz-scrollbar-thumb:hover {
       background: #cdbe8c;
-  }
+  }*/
 
 
 
@@ -208,12 +208,13 @@ MAIN NAVIGATION
     color: #cdbe8c;
     background: transparent;
     text-decoration: none;
-    -webkit-transition: background-color 0.35s ease-out;
-    transition: background-color 0.35s ease-out;
   }
 
   nav a:hover, nav a:focus {
     text-decoration: none;
+    opacity: 0.65;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
   }
 
   .navbg-home { /*background for main navigation on home page*/
@@ -317,6 +318,12 @@ HOME PAGE SPECIFIC STYLING
 
   .projectname-link:active, .projectname-link:visited {
     text-decoration: none;
+  }
+
+  .projectname-link:hover {
+    opacity: 0.65;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
   }
   
 
@@ -846,20 +853,6 @@ PROJECT PAGES SPECIFIC STYLING
     color: #999999;
   }
 
-  /*div ul.roleteam-description li{
-    list-style-type: none;
-    display: block;
-    font-family: 'Calibre-Regular', sans-serif;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 150%;
-    text-align: left;
-    max-width: 732px;
-    padding: 0px 0px;
-    margin: 0 auto;
-    color: #999999;
-  }*/
-
   h2 {
     display: block;
     font-family: 'SofiaPro-SemiBold', sans-serif;
@@ -907,7 +900,7 @@ PROJECT PAGES SPECIFIC STYLING
     padding-left: 20px;
   }
 
-  span.titles { /*for grey section titles*/
+  span.titles { /*grey section titles*/
     display: block;
     font-family: 'SofiaPro-Bold', sans-serif;
     font-weight: normal;
@@ -918,7 +911,7 @@ PROJECT PAGES SPECIFIC STYLING
     margin-top: 2.75rem;
   }
 
-  span.resulttitles { /*for grey result titles*/
+  span.resulttitles { /*grey result titles*/
     display: block;
     font-family: 'SofiaPro-Bold', sans-serif;
     font-weight: normal;
@@ -1008,7 +1001,7 @@ PROJECT PAGES SPECIFIC STYLING
     letter-spacing: 0.05rem;
     line-height: 1.2rem;
     text-transform: uppercase;
-    margin-top: 7.5rem;
+    margin-top: 8.5rem;
     margin-bottom: 0.5rem;
     color: #202021;
   }
@@ -1032,7 +1025,9 @@ PROJECT PAGES SPECIFIC STYLING
   }
 
   img.share-icon:hover {
-    opacity: 0.5;
+    opacity: 0.65;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
   }
 
   .nextproject {
@@ -1089,7 +1084,7 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
       margin: 15rem auto 14.15rem auto;
     }
 
-    div h1.project-name {
+    div h1.project-name, div h1.nextproject-name {
       font-size:1.5rem;
       letter-spacing: 0.085rem;
     }
