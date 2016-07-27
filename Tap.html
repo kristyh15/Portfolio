@@ -22,8 +22,8 @@
   <body>
   <main>
 
-
-   <script type="text/javascript" src="https://rawgithub.com/WickyNilliams/headroom.js/master/dist/headroom.js"></script>      
+    <!--for headroom.js main navigation-->
+    <script type="text/javascript" src="https://rawgithub.com/WickyNilliams/headroom.js/master/dist/headroom.js"></script>      
     <script type="text/javascript">
         $(".navbar-fixed-top").headroom();
     </script>
@@ -57,23 +57,21 @@
 
 
 <!--START VIDEO-->
-
   <div id="myVideoContainer" class="vidcontainer">
 
-    <video id="myVideo" poster="video/Tap-poster.png">
+
+    <!-- <div>
+      <img class="gifposter" src="video/gif-poster.gif"> 
+    </div> -->
+
+    <video autoplay loop muted id="myVideo" poster="video/Tap-poster.png">
       <source src="video/Tap.mp4" type="video/mp4">
       <source src="video/Tap.ogg" type="video/ogg">
       <source src="video/Tap.webm" type="video/webm">
       <source src="https://09-lvl3-pdl.vimeocdn.com/01/4767/4/123837496/354316361.mp4?" type="video/mp4">
     </video>
 
-    <!--video current and total time; use with videotime.js-->
-    <div id="videoTime" class="video-time">
-      <span id="currenttime"></span>&nbsp;&nbsp;<span id="duration"></span>
-    </div>
-
-
-    <!--video text and watch video button-->
+  <!--text on gif and watch video button-->
     <div>
       <div class="grid-row">
         <div class="vidprojecttitle vidtitle-tap">
@@ -85,28 +83,17 @@
         <p>interaction design, service design</p>
       </div>
 
-      <div class="pulse animated vidprojectbutton"> <!--this button on desktop or big screens-->
+      
+      <div id="vimeo-desktop" class="pulse animated vidprojectbutton"> <!--this button on desktop or big screens-->
          <a class="watchvideo-desktop" href="#">Watch Video</a>
       </div>
+
+       <div id="VimeoContainer"> </div> <!--load Vimeo in this div when watch video button is clicked-->
       
-      <div> <!--switch to this button on mobile or small screens-->
-        <a class="no-touchevents touchevents watchvideo-mobile" href="#">Watch Video</a>
+      <div> 
+        <a class="no-touchevents touchevents watchvideo-mobile" href="#">Watch Video</a> <!--switch to this button on mobile or small screens-->
       </div>
     </div> 
-
-
-    <!--controls-->
-    <div class="videoControlContainer">
-      <ul class="videoControls">
-        <li> <a id="resumeVideo" class="video-resume" href="#">&#9654;</a> </li>
-        <li> <a  id="pauseVideo" class="video-pause" href="#">&#9614;&#9614;</a> </li>
-        <li> <img id="volumeOn" class="volume-on" src="img/volume-on.png"> </li>
-        <li> <a id="captionVideo" class="video-caption"> cc </a> </li>
-        <li> <a id="fullscreenVideo" class="video-fullscreen"> ↕ </a> </li>
-      </ul>
-
-      <progress id='videoProgress' class="progressBar" max='100' value='0'><span>0</span>% played</progress>
-    </div>
 
   </div>
 <!--END VIDEO-->
@@ -128,8 +115,22 @@
 
 <!--START ROLE AND TEAM-->
     <div id="startchange" class="grid-col-m-12of12 grid-col-12of12">
-      <p class="roleteam"> <strong> My Role: </strong> Field Research, Ideation, UI/UX Design, Cinematography, Post-Production</p>
-      <p class="roleteam"> <strong> Team: </strong> Kristy Hung, Stevie T.A. Nguyen </p>
+      <p class="roleteam"> My Role: </p>
+      <p class="roleteam-description"> Field Research, Ideation, UI/UX Design, Cinematography, Post Production </p>
+      <!-- <ul class="roleteam-description">
+        <li> Field Research </li>
+        <li> Ideation </li>
+        <li> UI/UX Design </li>
+        <li> Cinematography </li>
+        <li> Post Production </li>
+      </ul> -->
+
+      <p class="roleteam"> Team: </p>
+      <p class="roleteam-description"> Kristy Hung, Stevie T.A. Nguyen </p>
+      <!-- <ul class="roleteam-description">
+        <li> Kristy Hung </li>
+        <li> Stevie T.A. Nguyen </li>
+      </ul> -->
     </div>
 <!--END ROLE AND TEAM-->
 
@@ -557,17 +558,14 @@
 
     <!--video scripts-->
     <script src="js/modernizr-html5video.js"></script>
-    <script src="js/videotime.js"></script>
-    <script src="js/videoProgress.js"></script>
-    <!-- <script src="js/seek.js"></script> -->
 
-    <!--main navigation srcipts-->
+    <!--main navigation scripts-->
     <script src="js/navigationbackground.js"></script>
     <script src="js/headroom.min.js"></script>
     <script src="js/headroom.js"></script>
 
     <script>
-      // jQuery for headroom.js hiding and revealing main navigation on scroll direction //
+// jQuery for headroom.js hiding and revealing main navigation on scroll direction //
       (function() {
           var header = document.querySelector("#header");
 
@@ -586,261 +584,52 @@
       }());
 
 
-             // jQuery for playing project video and hiding buttons with desktop screen button //
-             jQuery( document ).ready(function($) {
-                $('.watchvideo-desktop').click(function() {
-                    $('#myVideo').get(0).play();
-                    $('.vidprojecttitle').hide();
-                    $('.vidprojecttype').hide();
-                    $('.watchvideo-desktop').hide();
-                    $('.watchvideo-mobile').hide();
-                    $('.video-pause').show().delay(3000).fadeOut();
-                    $('.volume-on').show().delay(3000).fadeOut();
-                    $('.video-time').show().delay(3000).fadeOut();
-                    $('.progressBar').show().delay(3000).fadeOut();
-                    $('.video-fullscreen').show().delay(3000).fadeOut();
-                    $('.video-caption').show().delay(3000).fadeOut();
+// prevent spacebar from moving page down //
+      window.onkeydown = function(e) {
+        if (e.which == 32 && e.target == document.body) {
+          e.preventDefault();
+        }
+      };
 
 
+// click desktop watch video button to play Vimeo //
+      $('.watchvideo-desktop').click(function(e) {
+        e.preventDefault();
+      $('#VimeoContainer').html('<iframe src="https://player.vimeo.com/video/123837496?autoplay=1&color=b6d6d4" width="1080" height="608" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+      });
 
 
-
-                    // first mouse move //
-                    // when mouse moves while video is playing, show the pause button for 5sec and switch to resume button when pause button is clicked //
-                    $('#myVideoContainer').on('mousemove', function(event){
-                      $(this).find('.video-pause').show().delay(5000).fadeOut();
-                      $(this).find('.volume-on').show().delay(5000).fadeOut();
-                      $(this).find('.video-time').show().delay(5000).fadeOut();
-                      $(this).find('.progressBar').show().delay(5000).fadeOut();
-                      $(this).find('.video-fullscreen').show().delay(5000).fadeOut();
-                      $(this).find('.video-caption').show().delay(5000).fadeOut();
-                        $('.video-pause').click(function() { 
-                          $('.video-pause').hide();
-                          $('#pauseVideo').hide();
-                          $('.video-resume').show();
-                          $('#resumeVideo').show();
-                          $('.volume-on').show();
-                          $('.video-time').show();
-                          $('.progressBar').show();
-                          $('.video-fullscreen').show();
-                          $('.video-caption').show();
+// click mobile watch video button to play Vimeo //
+      $('.watchvideo-mobile').click(function(e) {
+        e.preventDefault();
+      $('#VimeoContainer').html('<iframe src="https://player.vimeo.com/video/123837496?autoplay=1&color=b6d6d4" width="1080" height="608" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+      });
 
 
-
-                          
-
-                          // when mouse moves, show resume button. When clicked, hide resume button and show pause button for 1sec //
-                          $('#myVideoContainer').on('mousemove', function(event){
-                            $(this).find('.video-resume').show();
-                              $('.video-resume').click(function() { 
-                                $('.video-resume').hide();
-                                $('#resumeVideo').hide();
-                                $('.video-pause').hide();
-                                $('#pauseVideo').hide();
-                                $('#volumeOn').show();
-                                $('#videoTime').show();
-                                $('#videoProgress').show();
-                                $('.video-fullscreen').show();
-                                $('.video-caption').show();
-
-                                  
-//up till here its fine
+// Prevent mobile watch video button from appearing when shrinking viewport after desktop watch video button is clicked //
+      jQuery( document ).ready(function($) {
+          $('.watchvideo-desktop').click(function() {
+              $('.watchvideo-desktop').hide();
+              $('.watchvideo-mobile').hide();
+              // $('header').hide();
+          });
+      });
 
 
-                                $('#myVideoContainer').on('mousemove', function(event){
-                                  $(this).find('#pauseVideo').show();
-                                  $('.video-resume').hide();
-
-                                    $('.video-pause').click(function() { 
-                                      $('#myVideo').get(0).pause();
-                                      $('#resumeVideo').show();
-                                      $('.video-resume').show();
-                                      $('.video-fullscreen').show();
-                                      $('.video-caption').show();
-                                    });
+// Prevent desktop watch video button from appearing when enlarging viewport after mobile watch video button is clicked
+      jQuery( document ).ready(function($) {
+          $('.watchvideo-mobile').click(function() {
+              $('.watchvideo-mobile').hide();
+              $('.watchvideo-desktop').hide();
+          });
+      });
 
 
-
-
-                                      $('.video-resume').click(function() { 
-                                        $('.video-resume').get(0).play();
-                                        $('.video-resume').hide();
-                                        $('#resumeVideo').hide();
-                                        $('.video-fullscreen').hide();
-                                        $('.video-caption').hide();
-                                      });
-                                }); 
-                              });
-                          }); 
-                        });
-                    }); 
-
-
-                    $('header').hide();
-
-
-                });
-            });
-
-
-
-
-
-
-
-
-
-
-
-
-            // jQuery for playing project video and hiding buttons with mobile screen button // 
-            jQuery( document ).ready(function($) {
-                $('.watchvideo-mobile').click(function() {
-                    $('#myVideo').get(0).play();
-                    $('.vidprojecttitle').hide();
-                    $('.vidprojecttype').hide();
-                    $('.watchvideo-mobile').hide();
-                    $('.watchvideo-desktop').hide();
-                    $('#videoProgress').hide();
-                    $('.video-pause').show().delay(1000).fadeOut();
-                    $('header').hide();
-                });
-            });
-
-
-
-            // pause video; hide pause button and show resume/play button
-            jQuery( document ).ready(function($) {
-                $('.video-pause').click(function() {
-                    $('#myVideo').get(0).pause();
-                    $('.vidprojecttitle').hide();
-                    $('.vidprojecttype').hide();
-                    $('.watchvideo-mobile').hide();
-                    $('.watchvideo-desktop').hide();
-                    $('.video-pause').hide();
-                    $('.video-resume').show();
-                    $('header').show();
-                    $('#videoProgress').show();
-                    $('.video-fullscreen').show();
-                    $('.video-caption').show();
-                    $("#myVideo")[0].volume = 0; //fade in audio after resuming from pause
-                    $("#myVideo").animate({volume: 1}, 2000); 
-                });
-            });
-
-
-
-            // resume video; hide resume/play button and show pause button
-            jQuery( document ).ready(function($) {
-                $('.video-resume').click(function() {
-                    $('#myVideo').get(0).play();
-                    $('.vidprojecttitle').hide();
-                    $('.vidprojecttype').hide();
-                    $('.watchvideo-mobile').hide();
-                    $('.watchvideo-desktop').hide();
-                    $('.video-resume').hide();
-                    $('.video-pause').show();
-                    $('header').hide();
-                });
-            });
-
-
-
-            // load poster, title, project type, and watch video button after video ends //
-            var video= $('#myVideo').get(0);       
-            video.addEventListener('ended',function(){
-                video.load();   
-                $('.vidprojecttitle').hide().delay(770).fadeIn();
-                $('.vidprojecttype').hide().delay(770).fadeIn();
-                $('.watchvideo-desktop').hide().delay(770).fadeIn();
-                $('header').show();
-                $('.watchvideo-mobile').hide();
-                $('.video-pause').hide();
-                $('.video-resume').hide();
-                $('.volume-on').hide();
-                $('.video-time').hide();
-                $('.progressBar').hide();
-                $('.video-fullscreen').hide();
-                $('.video-caption').hide();
-
-                //hide all controls when mouse moves after video ends
-                $('#myVideoContainer').on('mousemove', function(){
-                    $('header').show();
-                    $('.video-resume').hide();
-                    $('#resumeVideo').hide();
-                    $('.video-pause').hide();
-                    $('#pauseVideo').hide();
-                    $('#volumeOn').hide();
-                    $('#videoTime').hide();
-                    $('#videoProgress').hide();
-                    $('.video-fullscreen').hide();
-                    $('.video-caption').hide();   
-                });
-            },false);
-
-
-
-            // pause video using spacebar and prevent page from scrolling down
-            $(document).keydown(function(e) {
-                if (e.which == 32) {
-                    video.paused ? video.play() : video.pause();
-                    $('.vidprojecttitle').hide();
-                    $('.vidprojecttype').hide();
-                    $('.watchvideo-desktop').hide();
-                    $('.watchvideo-mobile').hide();
-                    $('header').show(); // HOW TO HIDE IT WHEN SPACEBAR IS PRESSED AGAIN???
-                    $('.video-pause').show().delay(3000).fadeOut();
-                    $('.volume-on').show().delay(3000).fadeOut();
-                    $('.video-time').show().delay(3000).fadeOut();
-                    $('.progressBar').show().delay(3000).fadeOut();
-                    $('.video-fullscreen').show().delay(3000).fadeOut();
-                    $('.video-caption').show().delay(3000).fadeOut();
-                }
-            });
-            window.onkeydown = function(e) {
-              if (e.which == 32 && e.target == document.body) {
-                e.preventDefault();
-              }
-            };
-
-
-
-            // fullscreeen video on double click
-            var video = document.getElementById("myVideo");
-            document.ondblclick = function(){
-                if(video.requestFullscreen){
-                    video.requestFullscreen();
-                }else if(video.mozRequestFullScreen){
-                    video.mozRequestFullScreen();
-                }else if(video.webkitRequestFullscreen){
-                    video.webkitRequestFullscreen();
-              }
-            };
-
-
-            // click button to fullscreen
-            jQuery( document ).ready(function($) {
-                $('.video-fullscreen').click(function() {
-                    if(video.requestFullscreen){
-                        video.requestFullscreen();
-                    }else if(video.mozRequestFullScreen){
-                        video.mozRequestFullScreen();
-                    }else if(video.webkitRequestFullscreen){
-                        video.webkitRequestFullscreen();
-                  }
-                });
-            });
-
-
-            // exit full screen
-            $(document).on('webkitExitFullScreen', function() {       
-              alert("Full Screen Closed"); 
-            });
-            if (document.mozCancelFullScreen) { 
-              alert('Full Screen Closed') 
-            }
-
-
+      $(window).scroll(function() {
+          if($(window).scrollTop() == $(document).height() - $(window).height()) {
+                 // ajax call get data from server and append to the div
+          }
+      });
 
     </script>
 
