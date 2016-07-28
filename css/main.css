@@ -1028,6 +1028,7 @@ PROJECT PAGES SPECIFIC STYLING
     opacity: 0.65;
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
+    z-index: -9;
   }
 
   .nextproject {
@@ -1044,6 +1045,7 @@ PROJECT PAGES SPECIFIC STYLING
     text-align: center;
     letter-spacing: 0rem;
     margin: 0.6rem auto 0.5rem auto;
+    z-index: -9;
   }
 
   .nextproject-link {
@@ -1052,6 +1054,7 @@ PROJECT PAGES SPECIFIC STYLING
     text-align: center;
     letter-spacing: 0rem;
     margin: 0.6rem auto 0.5rem auto;
+    z-index: -9;
   }
 
   .nextproject-line {
@@ -1065,17 +1068,88 @@ PROJECT PAGES SPECIFIC STYLING
 
   .nextproject-line:nth-child(1) { /*determines which child overlaps, in this case it's the first one*/
     position: relative;
+    z-index: -1;
   }
 
 
-/*******************************************
+/**********************************************************
 
-HOME PAGE MEDIA QUERIES AND BREAKPOINTS
+HOME PAGE & MAIN NAVIGATION MEDIA QUERIES AND BREAKPOINTS
 
-*******************************************/
-
+**********************************************************/
 
   @media only screen and (max-width: 320px) { 
+
+    nav {
+      position: relative;
+      font-family:'Inconsolata', sans-serif;
+      font-weight: 400;
+      font-size:1rem;
+      text-align: center;
+      letter-spacing: 0.08rem;
+      margin-left: 0rem;
+      width: 100%;
+      background: #f6f5f2;
+    }
+
+    ul a.button-nav {
+      display: none;
+    }
+
+    ul#bottomnavigation {
+      list-style-type: none;
+      text-align: center;
+      font-size: 0.9rem;
+      font-family: 'Inconsolata', sans-serif;
+      background-color: #f6f5f2;
+      opacity: 0.985;
+      position: fixed;
+      margin: 0rem;
+      padding: 0rem;
+      bottom: 0;
+      width: 100%;
+      z-index: 99999999999999;
+    }
+
+    a.bottomnav-projects {
+      display: inline-block;
+      color: #cdbe8c;
+      float: left;
+      text-decoration: none;
+      position: relative;
+      margin: 4.3% 15% 4.2% 8.25%;
+    }
+
+    a.bottomnav-about {
+      display: inline-block;
+      color: #cdbe8c;
+      text-decoration: none;
+      position: relative;
+      margin: 4.3% auto 4.2% auto;
+    }
+
+    a.bottomnav-contact {
+      display: inline-block;
+      color: #cdbe8c;
+      float: right;
+      text-decoration: none;
+      position: relative;
+      margin: 4.3% 8.25% 4.2% 15%;
+    }
+
+    .nextproject-line {
+      height: 5rem; /*so it extends above the bottom nav*/
+      width: 2px; /*pixels so it doesn't change size when readjusting viewport*/
+      justify-content: center;
+      position: absolute;
+      margin: 0 auto;
+      bottom: 0;
+    }
+
+    ul a.button-nav {
+      display: none;
+    }
+
     p.intro {
       font-size:1.5rem;
       letter-spacing: 0.085rem;
@@ -1130,6 +1204,81 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 321px) and (max-width: 479px) { 
+
+    nav {
+      position: relative;
+      font-family:'Inconsolata', sans-serif;
+      font-weight: 400;
+      font-size:1rem;
+      text-align: center;
+      letter-spacing: 0.08rem;
+      margin-left: 0rem;
+      width: 100%;
+      background: #f6f5f2;
+    }
+
+    ul a.button-nav {
+      display: none;
+    }
+
+    ul#bottomnavigation {
+      list-style-type: none;
+      text-align: center;
+      font-size: 0.95rem;
+      font-family: 'Inconsolata', sans-serif;
+      background-color: #f6f5f2;
+      opacity: 0.985;
+      position: fixed;
+      margin: 0rem;
+      padding: 0rem;
+      bottom: 0;
+      width: 100%;
+      z-index: 9999999999999999999999999999999999999999999999999;
+    }
+
+    a.bottomnav-projects {
+      display: inline-block;
+      color: #cdbe8c;
+      float: left;
+      text-decoration: none;
+      position: relative;
+      margin: 3.70% 15% 3.70% 10%;
+    }
+
+    a.bottomnav-about {
+      display: inline-block;
+      color: #cdbe8c;
+      text-decoration: none;
+      position: relative;
+      margin: 3.70% auto;
+    }
+
+    a.bottomnav-contact {
+      display: inline-block;
+      color: #cdbe8c;
+      float: right;
+      text-decoration: none;
+      position: relative;
+      margin: 3.70% 10% 3.70% 15%;
+    }
+
+    a.bottomnav-projects:focus, a.bottomnav-projects:hover,
+    a.bottomnav-about:focus, a.bottomnav-about:hover,
+    a.bottomnav-contact:focus, a.bottomnav-contact:hover {
+      opacity: 0.65;
+      -webkit-transition: opacity 0.25s;
+      transition: opacity 0.25s;
+    }
+
+    .nextproject-line {
+      height: 5rem; /*so it extends above the bottom nav*/
+      width: 2px; /*pixels so it doesn't change size when readjusting viewport*/
+      justify-content: center;
+      position: absolute;
+      margin: 0 auto;
+      bottom: 0;
+    }
+
     p.intro {
       font-size:1.75rem;
       letter-spacing: 0.085rem;
@@ -1186,6 +1335,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 480px) and (max-width: 639px) { 
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size:1.75rem;
       letter-spacing: 0.09rem;
@@ -1243,6 +1397,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 640px) and (max-width: 700px) {
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size: 1.85rem;
       letter-spacing: 0.099rem;
@@ -1296,6 +1455,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 701px) and (max-width: 776px) {
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size: 2.15rem;
       letter-spacing: 0.099rem;
@@ -1350,6 +1514,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 777px) and (max-width: 874px) {
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size: 2.25rem;
       letter-spacing: 0.099rem;
@@ -1401,6 +1570,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 875px) and (max-width: 991px) {
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size: 2.35rem;
       letter-spacing: 0.099rem;
@@ -1459,6 +1633,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 992px) and (max-width: 1274px){
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size: 2.5rem;
       letter-spacing: 0.099rem;
@@ -1511,6 +1690,11 @@ HOME PAGE MEDIA QUERIES AND BREAKPOINTS
   }
 
   @media only screen and (min-width: 1275px) {
+
+    #bottomheader {
+      display: none;
+    }
+
     p.intro {
       font-size: 2.5rem;
       letter-spacing: 0.099rem;
